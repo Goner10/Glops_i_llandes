@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Glops i Llandes</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <section class="header_carta">
+        <a href="index.html" class="hero__logo">
+            <img src="img/GLOPS2-removebg-preview.png" alt="Logo Glops i Llandes" class="hero__logo-img">
+        </a>
+
+        <button class="hero__menu-toggle" id="mobile-menu" aria-label="Menú">
+            <span class="hero__menu-toggle-bar"></span>
+            <span class="hero__menu-toggle-bar"></span>
+            <span class="hero__menu-toggle-bar"></span>
+        </button>
+
+        <nav class="hero__nav" id="nav-menu">
+            <ul class="hero__nav-list">
+                <li class="hero__nav-item"><a href="index.html" class="hero__nav-link">Home</a></li>
+                <li class="hero__nav-item"><a href="carta.html" class="hero__nav-link">Carta</a></li>
+                <li class="hero__nav-item"><a href="reservas.html" class="hero__nav-link">Reservas</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="reservas-section">
+        <h1 class="titulo__reserva">
+            <span class="lang-es">Reserva tu mesa</span>
+            <span class="lang-en hidden">Make a Reservation</span>
+        </h1>
+        
+        <!-- Selector de idioma -->
+        <div class="language-toggle">
+            <button class="lang-btn active" data-lang="es">Español</button>
+            <button class="lang-btn" data-lang="en">English</button>
+        </div>
+
+        <!-- Widget en español -->
+        <div class="covermanager-widget" id="widget-es">
+            <script src="https://www.covermanager.com/js/iframeResizer.min.js"></script>
+            <iframe 
+                id="gloops-i-llandes-es"
+                title="Reservas en español"
+                src="https://www.covermanager.com/reservation/module_restaurant/gloops-i-llandes/spanish"
+                allow="payment"
+                frameborder="0"
+                height="650"
+                width="100%"
+                onload="iFrameResize();">
+            </iframe>
+        </div>
+
+        <!-- Widget en inglés -->
+        <div class="covermanager-widget hidden" id="widget-en">
+            <iframe 
+                id="gloops-i-llandes-en"
+                title="Reservations in English"
+                src="https://www.covermanager.com/reservation/module_restaurant/gloops-i-llandes/english"
+                allow="payment"
+                frameborder="0"
+                height="650"
+                width="100%"
+                onload="iFrameResize();">
+            </iframe>
+        </div>
+
+        <p class="contacto-alternativo">
+            <span class="lang-es">¿Prefieres reservar por teléfono? Llama al <a href="tel:697994431">697 994 431</a></span>
+            <span class="lang-en hidden">Prefer to book by phone? Call <a href="tel:697994431">+34 697 994 431</a></span>
+        </p>
+    </section>
+
+    <script src="JS/scripts.js"></script>
+</body>
+</html>
