@@ -6,9 +6,36 @@
 
 @font-face {
     font-family: 'Brondi Condensed';
-    src: url('../fonts/Brondi-Condensed.woff2') format('woff2'),
-         url('../fonts/Brondi-Condensed.woff') format('woff');
-    font-weight: normal;
+    src: url('../fonts/Brondi-Condensed-Regular.woff2') format('woff2'),
+         url('../fonts/Brondi-Condensed-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Brondi Condensed';
+    src: url('../fonts/Brondi-Condensed-Medium.woff2') format('woff2'),
+         url('../fonts/Brondi-Condensed-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Brondi Condensed';
+    src: url('../fonts/Brondi-Condensed-SemiBold.woff2') format('woff2'),
+         url('../fonts/Brondi-Condensed-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Brondi Condensed';
+    src: url('../fonts/Brondi-Condensed-Bold.woff2') format('woff2'),
+         url('../fonts/Brondi-Condensed-Bold.woff') format('woff');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -120,12 +147,13 @@ body{
     font-size: 30px;
 }
 .hero__nav-link:hover{
-    color: aqua;
+    text-decoration: underline;
 }
 
 .hero__title {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 5.7rem;
+    font-size: 6rem;
+    font-weight: 400;
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */ 
     position: relative;
     display: inline-block;
@@ -133,7 +161,7 @@ body{
 
 .hero__btn {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     background: black;
     color: white;
     padding: 3px 50px;
@@ -183,7 +211,7 @@ body{
     line-height: 1.6;
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.5rem;
-    
+    letter-spacing: 1px;
 }
 
 /* Carrusel */
@@ -243,9 +271,9 @@ body{
 .about2 {
     background-color: #f5f5f5;
     text-align: center;
-    
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    padding-bottom: 20px;
 }
 
 .about2__content{
@@ -255,7 +283,6 @@ body{
 .about2__title {
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 3.3rem;
-    font-weight: 700;
     margin-bottom: 20px;
     color: black;
 }
@@ -265,7 +292,7 @@ body{
     line-height: 1.6;
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.5rem;
-    
+    letter-spacing: 1px;
 }
 
 .about2__photos {
@@ -281,38 +308,54 @@ body{
 .foto1 {
     grid-area: foto1;
     width: 100%; 
-    height: 280px; /* Altura fija (ajústala a tu gusto) */
+    height: 280px; 
     overflow: hidden; /* Recorta el exceso de imagen */
     position: relative; /* Necesario para efectos avanzados */
     
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
 }
 
-/* Estilo para la imagen dentro del contenedor */
+
+.foto {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 240px; /* Altura fija para el alargado */
+    width: 100%;
+}
+
+.foto--cuadrada {
+    aspect-ratio: 1/1.1; 
+    height: auto;
+    opacity: 0.9;
+}
+
+
+.foto--cuadrada, .foto--cuadrada {
+    aspect-ratio: 1/1;
+}
+
+
 .foto__img {
     width: 100%;
     height: 100%;
     object-fit: cover; 
-    object-position: center; 
+    object-position: center center; 
     display: block; /* Elimina espacio fantasma debajo */
 }
 
-
-.foto2, .foto3 {
-    width: 100%;
-    aspect-ratio: 1/1; /* Relación 1:1 (cuadrado perfecto) */
-    background-color: #555;
+.foto1 {
+    height: 220px;
 }
 
-.foto2 {
-    grid-area: foto2;
-    
+.about2__title {
+    font-size: 2.5rem;
 }
 
-.foto3 {
-    grid-area: foto3;
-    
+.about2__text {
+    font-size: 1.3rem;
 }
+
 
 /* Ajuste para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -330,54 +373,101 @@ body{
 
 .reservas {
     position: relative; 
-    height: 70vh; 
+    height: 140vh; 
     display: flex;
     align-items: center; 
-    justify-content: center; /* Centrado horizontal */
-    background-color: #f5f5f5; /* opcional */
+    justify-content: center; 
 }
 
 .contenedor__reservas {
     display: flex;
     flex-direction: column; 
     align-items: center;
-    gap: 15px; /* Espacio entre los elementos */
     text-align: center;
-    /* Sin fondo, borde ni sombra */
+    position: relative;
+    width: 100%; 
+    max-width: 1200px;
 }
+
 .logo__reservas {
-    transform: translateY(-55px); /* Sube el logo */
+    margin-bottom: 30px;
 }
 
 .logo__reservas img {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
 }
 
-h2 {
-    font-size: 1.2rem;
-    margin: 0;
+
+.boton__reservas {
+    
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 2.3rem;
 }
 
-h2 a {
+.boton__reservas_a {
     text-decoration: none;
-    color: #333;
-    transition: color 0.3s;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 
 .contacto__reservas {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 5px;
+    align-items: flex-start;
+    margin-top: 60px; 
+    width: 100%;
+    padding-left: 60px;
+    box-sizing: border-box;
+}
+.titulo__direccion, 
+.titulo__telefono {
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 3.2rem;
+    text-align: left; /* Alinea el texto a la izquierda */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    letter-spacing: 1px; 
+    text-transform: uppercase;
 }
 
-.direccion{
-    margin: 0;
+.titulo__insta{
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 2rem;
+    font-size: 3.2rem;
+    text-align: left; /* Alinea el texto a la izquierda */
+    width: 100%; 
+
+    margin-bottom: 10px;
 }
+
+
+.direccion {
+    
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.8rem;
+    text-align: left; /* Alinea el texto a la izquierda */
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+.telefono{
+    color: black;
+    text-decoration: none;
+    font-family: 'Brondi Condensed', sans-serif; 
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+
+.mapa-interactivo{
+    margin-top: 30px;
+    width: 100%;
+}
+
+
+
 
 
 /* Seccion Footer */
@@ -385,26 +475,32 @@ h2 a {
 
 .contenedor__footer {
     background-color: #333333;
-    height: 215px;
+    height: 150px;
     display: flex;
     flex-direction: column;  
     align-items: center;     
     justify-content: center; 
     gap: 15px;              /* Espacio entre elementos */
-    padding: 20px;          /* Espacio interno */
+    padding: 20px;          
 }
-.telefono{
-    color: black;
-    text-decoration: none;
-    font-family: 'Brondi Condensed', sans-serif; 
-    font-size: 2.2rem;
-}
+
 
 .foto_footer {
     width: 90px;
     height: 90px;
     
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -423,6 +519,7 @@ h2 a {
 .titulo__reserva {
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 2rem;
+    margin-left: 30px;
 }
 
 .covermanager-widget {
