@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+
     // Menú hamburguesa
     const mobileMenu = document.getElementById('mobile-menu');
     const navMenu = document.getElementById('nav-menu');
@@ -71,4 +73,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 5000);
         });
     }
+
+    const botonesAcordeon = document.querySelectorAll('.acordeon-titulo');
+
+    botonesAcordeon.forEach(boton => {
+        boton.addEventListener('click', () => {
+            const contenido = boton.nextElementSibling;
+
+            // Cierra todos los paneles excepto el actual
+            document.querySelectorAll('.acordeon-contenido').forEach(panel => {
+                if (panel !== contenido) {
+                    panel.classList.remove('activo');
+                }
+            });
+
+            // Alterna el panel clicado
+            contenido.classList.toggle('activo');
+        });
+    });
+
+
 });
