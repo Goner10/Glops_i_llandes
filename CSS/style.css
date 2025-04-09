@@ -52,7 +52,7 @@ body{
 
 .hero {
     position: relative;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -436,10 +436,16 @@ body{
 .titulo__insta{
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 3.2rem;
-    text-align: left; /* Alinea el texto a la izquierda */
+    text-align: left; 
     width: 100%; 
-
     margin-bottom: 10px;
+}
+
+.logo__insta img{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    
 }
 
 
