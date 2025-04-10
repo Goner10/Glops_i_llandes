@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-
     // Menú hamburguesa
     const mobileMenu = document.getElementById('mobile-menu');
     const navMenu = document.getElementById('nav-menu');
@@ -95,86 +94,102 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Carrusel (si existe en la página)
-
     const carousel = document.querySelector('.carousel__container');
-if (carousel) {
-    const items = document.querySelectorAll('.carousel__item');
-    const indicatorsContainer = document.querySelector('.carousel__indicators');
-    let currentIndex = 0;
-    
-    // Crear indicadores
-    items.forEach((_, index) => {
-        const indicator = document.createElement('div');
-        indicator.classList.add('carousel__indicator');
-        if (index === 0) indicator.classList.add('active');
+    if (carousel) {
+        const items = document.querySelectorAll('.carousel__item');
+        const indicatorsContainer = document.querySelector('.carousel__indicators');
+        let currentIndex = 0;
+        let autoPlayInterval;
         
-        indicator.addEventListener('click', () => {
-            currentIndex = index;
-            updateCarousel();
-            updateIndicators();
+        // Crear indicadores
+        items.forEach((_, index) => {
+            const indicator = document.createElement('div');
+            indicator.classList.add('carousel__indicator');
+            if (index === 0) indicator.classList.add('active');
+            
+            indicator.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+                updateIndicators();
+                resetAutoPlayTimer(); // Reiniciar el temporizador al hacer clic en un indicador
+            });
+            
+            indicatorsContainer.appendChild(indicator);
         });
         
-        indicatorsContainer.appendChild(indicator);
-    });
-    
-    const indicators = document.querySelectorAll('.carousel__indicator');
-    
-    function updateCarousel() {
-        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-    
-    function updateIndicators() {
-        indicators.forEach((ind, index) => {
-            if (index === currentIndex) {
-                ind.classList.add('active');
-            } else {
-                ind.classList.remove('active');
-            }
-        });
-    }
-    
-    // Agregar funcionalidad de swipe para móviles
-    let touchStartX = 0;
-    let touchEndX = 0;
-    
-    carousel.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-    });
-    
-    carousel.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-    });
-    
-    function handleSwipe() {
-        if (touchEndX < touchStartX) {
-            // Swipe izquierda (siguiente)
-            currentIndex = (currentIndex + 1) % items.length;
-        } else if (touchEndX > touchStartX) {
-            // Swipe derecha (anterior)
-            currentIndex = (currentIndex - 1 + items.length) % items.length;
+        const indicators = document.querySelectorAll('.carousel__indicator');
+        
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
-        updateCarousel();
-        updateIndicators();
-    }
-    
-    // Auto-reproducción
-    let autoPlayInterval = setInterval(() => {
-        currentIndex = (currentIndex + 1) % items.length;
-        updateCarousel();
-        updateIndicators();
-    }, 6000); 
-    
-    carousel.addEventListener('mouseenter', () => {
-        clearInterval(autoPlayInterval);
-    });
-    
-    carousel.addEventListener('mouseleave', () => {
-        autoPlayInterval = setInterval(() => {
-            currentIndex = (currentIndex + 1) % items.length;
+        
+        function updateIndicators() {
+            indicators.forEach((ind, index) => {
+                if (index === currentIndex) {
+                    ind.classList.add('active');
+                } else {
+                    ind.classList.remove('active');
+                }
+            });
+        }
+        
+        // Función para iniciar el temporizador de reproducción automática
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % items.length;
+                updateCarousel();
+                updateIndicators();
+            }, 4000);
+        }
+        
+        // Función para detener el temporizador
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+        
+        // Función para reiniciar el temporizador
+        function resetAutoPlayTimer() {
+            stopAutoPlay();
+            startAutoPlay();
+        }
+        
+        // Agregar funcionalidad de swipe para móviles
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoPlay(); // Detener autoplay al iniciar el toque
+        });
+        
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+            startAutoPlay(); // Reiniciar autoplay al finalizar el toque
+        });
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) { // Umbral de 50px para considerar un swipe
+                // Swipe izquierda (siguiente)
+                currentIndex = (currentIndex + 1) % items.length;
+            } else if (touchEndX > touchStartX + 50) { // Umbral de 50px para considerar un swipe
+                // Swipe derecha (anterior)
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+            }
             updateCarousel();
             updateIndicators();
-        }, 6000);
-    });
-}
+        }
+        
+        // Detener autoplay en eventos de mouse también
+        carousel.addEventListener('mouseenter', () => {
+            stopAutoPlay();
+        });
+        
+        carousel.addEventListener('mouseleave', () => {
+            startAutoPlay();
+        });
+        
+        // Iniciar la reproducción automática
+        startAutoPlay();
+    }
 });
