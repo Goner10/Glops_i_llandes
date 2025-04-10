@@ -235,7 +235,8 @@ body{
 
 .about__title {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 2.9rem;
+    font-size: 3rem;
+    letter-spacing: 1px;
     margin-left: 25px;
     margin-bottom: 1px;
     color: black;
@@ -248,8 +249,8 @@ body{
     margin-bottom: 20px;
     line-height: 1.6;
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.3rem;
-    letter-spacing: 0.5px;
+    font-size: 1.7rem;
+    letter-spacing: 0.3px;
     text-align:start;
 }
 
@@ -325,7 +326,8 @@ body{
 
 .about2__title {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 2.9rem;
+    font-size: 3rem;
+    letter-spacing: 1px;
     margin-bottom: 20px;
     margin-top: -10px;
     color: black;
@@ -335,7 +337,7 @@ body{
     max-width: 800px;
     line-height: 1.6;
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     letter-spacing: 0.3px;
     text-align: start;
     margin-bottom: 10px; 
