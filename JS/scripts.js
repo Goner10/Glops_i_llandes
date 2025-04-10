@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentIndex = (currentIndex + 1) % items.length;
                 updateCarousel();
                 updateIndicators();
-            }, 4000);
+            }, 6000);
         }
         
         // Función para detener el temporizador

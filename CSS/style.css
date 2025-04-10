@@ -471,7 +471,6 @@ body{
     box-sizing: border-box;
 }
 .titulo__direccion, 
-.titulo__telefono,
 .titulo__insta {
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 3.1rem;
@@ -483,14 +482,32 @@ body{
     margin-top: 15px; 
     margin-bottom: -10px;
 }
+.titulo__telefono{
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 3.1rem;
+    letter-spacing: 1px;
+    text-align: left; 
+    width: 100%;
+     
+    text-transform: uppercase;
+    margin-top: -15px; 
+    margin-bottom: -10px;
+}
 
 
 
 .logo__insta img{
     width: 60px;
     height: 60px;
-    margin: 10px;
+    margin-right: 10px;
+    margin-top: 15px; 
+}
+
+.logo__google img{
+    width: 65px;
+    height: 65px;
     
+    margin-top: 15px; 
 }
 
 
