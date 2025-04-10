@@ -249,7 +249,9 @@ body{
     text-align:start;
 }
 
+
 /* Carrusel */
+
 .carousel {
     position: relative;
     width: 100vw;
@@ -269,7 +271,7 @@ body{
 .carousel__item {
     width: 100vw; 
     height: auto; 
-    max-height: 580px; 
+    max-height: 650px; 
     object-fit: cover; 
     flex-shrink: 0; 
     object-position: center;
@@ -302,18 +304,13 @@ body{
 
 
 
-
-
 /* About2 section */ 
-
 .about2 {
-    
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px; /* Añadir espacio después de esta sección */
+    margin-bottom: 40px;
     position: relative;
     z-index: 1;
-    
 }
 
 .about2__content{
@@ -333,7 +330,7 @@ body{
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.5rem;
     letter-spacing: 0.5px;
-    text-align:start;
+    text-align: start;
 }
 
 .about2__photos {
@@ -345,59 +342,57 @@ body{
     margin-top: 30px;
 }
 
-
+/* Imagen grande superior */
 .foto1 {
     grid-area: foto1;
     width: 100%; 
     height: 280px; 
     overflow: hidden; 
     position: relative; 
-    
 }
 
-
-.foto {
-    position: relative;
+/* Imágenes inferiores */
+.foto2, .foto3 {
+    height: 190px; /* Altura fija para las imágenes inferiores */
     overflow: hidden;
-    
-    transition: transform 0.3s ease;
-    height: 240px; 
-    width: 100%;
+    position: relative;
 }
 
-.foto--cuadrada {
-    aspect-ratio: 1/1.1; 
-    height: auto;
-    opacity: 0.9;
+.foto2 {
+    grid-area: foto2;
 }
 
-
-.foto--cuadrada, .foto--cuadrada {
-    aspect-ratio: 1/1;
+.foto3 {
+    grid-area: foto3;
 }
 
-
+/* Estilo para todas las imágenes */
 .foto__img {
     width: 100%;
     height: 100%;
     object-fit: cover; 
     object-position: center center; 
-    display: block; /* Elimina espacio fantasma debajo */
+    display: block;
 }
 
-.foto1 {
-    height: 220px;
-}
-
-
-
-
-
-
-/* Ajuste para pantallas pequeñas */
-@media (max-width: 768px) {
+/* Ajustes para pantallas más grandes */
+@media (min-width: 768px) {
+    .foto1 {
+        height: 380px;
+    }
+    
     .foto2, .foto3 {
-        min-width: 100%; /* Apila en móviles */
+        height: 320px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .foto1 {
+        height: 420px;
+    }
+    
+    .foto2, .foto3 {
+        height: 360px;
     }
 }
 
@@ -539,10 +534,6 @@ body{
 
 
 
-
-
-
-
 /* Página cover manager */
 
 .reservas-section {
@@ -632,10 +623,6 @@ body{
         min-height: 650px; /* Ajustado para pantallas grandes */
     }
 }
-
-
-
-
 
 
 
