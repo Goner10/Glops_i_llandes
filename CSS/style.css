@@ -124,8 +124,8 @@ body{
 }
 
 .hero__nav-link {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.3rem;
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.5rem;
     color: white;
     text-decoration: none;
     display: block;
@@ -146,24 +146,24 @@ body{
 }
 
 .hero__title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 3.2rem;
+    letter-spacing: 1px;
     font-weight: 900;
     
     font-weight: 400;
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */ 
     position: relative;
     display: block;
-    margin-bottom: 5px; /* Añade este margen específico de 15px */
+    margin-bottom: 25px; /* Añade este margen específico de 15px */
     margin-top: 0;
 }
 
 .hero__btn {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.1rem;
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.3rem;
     letter-spacing: 1px;
     background: black;
-    
     color: white;
     padding: 3px 30px;
     border-radius: 10px;
@@ -234,10 +234,10 @@ body{
 }
 
 .about__title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.3rem;
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 2.9rem;
     margin-left: 25px;
-    margin-bottom: 5px;
+    margin-bottom: 1px;
     color: black;
     text-align: start;
     
@@ -245,10 +245,10 @@ body{
 
 .about__text {
     max-width: 800px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     line-height: 1.6;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.1rem;
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.3rem;
     letter-spacing: 0.5px;
     text-align:start;
 }
@@ -312,18 +312,19 @@ body{
 .about2 {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     position: relative;
     z-index: 1;
 }
 
 .about2__content{
-    padding: 20px;
+    padding: 10px 20px 20px;
 }
 
 .about2__title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.3rem;
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 2.9rem;
     margin-bottom: 20px;
     color: black;
 }
@@ -331,10 +332,14 @@ body{
 .about2__text {
     max-width: 800px;
     line-height: 1.6;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.3px;
     text-align: start;
+    margin-bottom: 10px; 
+}
+.about2__text + .about2__text {
+    margin-top: 0; /* Elimina el margen superior para párrafos consecutivos */
 }
 
 .about2__photos {
@@ -343,7 +348,7 @@ body{
         "foto1 foto1"
         "foto2 foto3";
     gap: 10px; 
-    margin-top: 30px;
+    margin-top: 5px;
 }
 
 
@@ -440,8 +445,8 @@ body{
 
 .boton__reservas {
     
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.3rem;
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 2.3rem;
     
 }
 
@@ -466,11 +471,11 @@ body{
 .titulo__direccion, 
 .titulo__telefono,
 .titulo__insta {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.3rem;
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 2.9rem;
     text-align: left; 
     width: 100%;
-    letter-spacing: 0.5px; 
+     
     text-transform: uppercase;
     margin-bottom: 5px; 
     margin-top: 15px; 
@@ -489,15 +494,17 @@ body{
 .direccion {
     color: black;
     text-decoration: none;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.3rem;
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.5rem;
     margin-top: 0;
+    
     
 }
 .direccion-link {
     color: black;
     text-decoration: none;
     transition: color 0.3s ease;
+    text-decoration: underline #E2A300;
 }
 
 .direccion-link:hover {
@@ -508,8 +515,8 @@ body{
 .telefono{
     color: black;
     text-decoration: none;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.5rem;
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.6rem;
     letter-spacing: 1px;
     margin-top: 0;
     text-decoration: underline #E2A300;
@@ -549,8 +556,8 @@ body{
 }
 
 .titulo__reserva {
-    font-family: 'Bebas Neue', sans-serif;
-    
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.8rem;
     margin-left: 30px;
     margin-top: 50px;
 }
@@ -569,8 +576,8 @@ body{
 
 .contacto-alternativo {
     margin-top: 20px;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.1rem;
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.3rem;
     color: #555;
 }
 
@@ -590,8 +597,8 @@ body{
     margin: 0 5px;
     cursor: pointer;
     border-radius: 4px;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.3rem;
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.5rem;
     transition: all 0.3s;
 }
 
@@ -651,7 +658,7 @@ margin-bottom: 80px;
 .acordeon-carta {
     max-width: 700px;
     margin: 0 auto;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Brondi Condensed', sans-serif;
     padding: 40px 10px;
     margin-bottom: 100px;
 }
@@ -660,7 +667,7 @@ margin-bottom: 80px;
     background-color: black;
     color: white;
     font-size: 2rem;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Brondi Condensed', sans-serif;
     text-transform: uppercase;
     border: none;
     width: 100%;
@@ -685,11 +692,11 @@ margin-bottom: 80px;
 
 
 .acordeon-titulo:first-of-type .acordeon-logo {
-    right: 20px; 
+    right: 40px; 
 }
 
 .acordeon-titulo:nth-of-type(2) .acordeon-logo {
-    left: 10px; 
+    left: 30px; 
 }
 
 
@@ -914,12 +921,12 @@ margin-bottom: 80px;
 }
 
 .footer__copyright {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     margin: 0 0 5px 0;
 }
 
 .footer__credits {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: 0;
     opacity: 0.8;
     color: #E2A300;
