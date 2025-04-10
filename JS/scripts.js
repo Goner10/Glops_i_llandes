@@ -5,25 +5,52 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.getElementById('mobile-menu');
     const navMenu = document.getElementById('nav-menu');
     
-    mobileMenu.addEventListener('click', function(e) {
-        this.classList.toggle('hero__menu-toggle--active');
+    // Función para alternar el menú
+    function toggleMenu(e) {
+        if (e) e.stopPropagation();
+        mobileMenu.classList.toggle('hero__menu-toggle--active');
         navMenu.classList.toggle('hero__nav--active');
-        e.stopPropagation(); // Previene que el clic llegue al documento
-    });
+    }
     
-    // Evitar que los clics dentro del menú lo cierren
-    navMenu.addEventListener('click', function(e) {
-        e.stopPropagation(); // Previene que el clic llegue al documento
-    });
-    
-    // Cerrar el menú cuando se hace clic en cualquier parte fuera del menú
-    document.addEventListener('click', function() {
+    // Función para cerrar el menú
+    function closeMenu() {
         if (navMenu.classList.contains('hero__nav--active')) {
             mobileMenu.classList.remove('hero__menu-toggle--active');
             navMenu.classList.remove('hero__nav--active');
         }
+    }
+    
+    // Evento click para el botón del menú
+    mobileMenu.addEventListener('click', function(e) {
+        toggleMenu(e);
     });
-
+    
+    // Evento touch para el botón del menú
+    mobileMenu.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        toggleMenu(e);
+    }, false);
+    
+    // Evitar que clicks dentro del menú lo cierren
+    navMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+    
+    // Evitar que touches dentro del menú lo cierren
+    navMenu.addEventListener('touchend', function(e) {
+        e.stopPropagation();
+    }, false);
+    
+    // Cerrar menú con click fuera
+    document.addEventListener('click', closeMenu);
+    
+    // Cerrar menú con touch fuera
+    document.addEventListener('touchend', function(e) {
+        // Solo procesar eventos de toque que no sean sobre el menú o el botón
+        if (!navMenu.contains(e.target) && e.target !== mobileMenu && !mobileMenu.contains(e.target)) {
+            closeMenu();
+        }
+    }, false);
 
 
     // Selector de idioma para reservas
