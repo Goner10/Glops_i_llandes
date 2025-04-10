@@ -163,7 +163,7 @@ if (carousel) {
         currentIndex = (currentIndex + 1) % items.length;
         updateCarousel();
         updateIndicators();
-    }, 4000); // Cambio cada 3 segundos
+    }, 6000); 
     
     carousel.addEventListener('mouseenter', () => {
         clearInterval(autoPlayInterval);
@@ -174,7 +174,7 @@ if (carousel) {
             currentIndex = (currentIndex + 1) % items.length;
             updateCarousel();
             updateIndicators();
-        }, 4000);
+        }, 6000);
     });
 }
 });

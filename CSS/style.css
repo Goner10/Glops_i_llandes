@@ -156,12 +156,12 @@ body{
 
 .hero__btn {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.3rem;
-    letter-spacing: 2px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
     background: black;
     
     color: white;
-    padding: 3px 40px;
+    padding: 3px 30px;
     border-radius: 10px;
     text-decoration: none;
     display: inline-block;
@@ -346,14 +346,14 @@ body{
 .foto1 {
     grid-area: foto1;
     width: 100%; 
-    height: 280px; 
+    height: 290px; 
     overflow: hidden; 
     position: relative; 
 }
 
 
 .foto2, .foto3 {
-    height: 200px;
+    height: 220px;
     overflow: hidden;
     position: relative;
 }
