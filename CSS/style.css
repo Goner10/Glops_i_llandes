@@ -13,32 +13,7 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Brondi Condensed';
-    src: url('../fonts/Brondi-Condensed-Medium.woff2') format('woff2'),
-         url('../fonts/Brondi-Condensed-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'Brondi Condensed';
-    src: url('../fonts/Brondi-Condensed-SemiBold.woff2') format('woff2'),
-         url('../fonts/Brondi-Condensed-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Brondi Condensed';
-    src: url('../fonts/Brondi-Condensed-Bold.woff2') format('woff2'),
-         url('../fonts/Brondi-Condensed-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
 
 body{
     background-color: #f5f5f5;
@@ -71,7 +46,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.5;
+    opacity: 0.55;
     z-index: -1;
 }
 
@@ -83,7 +58,7 @@ body{
 }
 
 .hero__logo-img {
-    max-height: 55px;
+    max-height: 60px;
     width: auto;
 }
 
@@ -161,7 +136,8 @@ body{
 
 .hero__btn {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
     background: black;
     color: white;
     padding: 3px 50px;
@@ -188,78 +164,89 @@ body{
 
 /* About Section */
 .about {
-    padding: 10px 25px;
+    
     background-color: #f5f5f5;
     text-align: center;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .about__content{
-    padding: 10px;
+    padding: 10px 25px;
+    
 }
 
 .about__title {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 2.8rem;
+    margin-left: 25px;
     color: black;
+    text-align: start;
+    
 }
 
 .about__text {
     max-width: 800px;
-    margin: 0 auto 30px;
+    
+    margin-bottom: 20px;
     line-height: 1.6;
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
+    text-align:start;
 }
 
 /* Carrusel */
 .carousel {
     position: relative;
-    max-width: 1000px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    margin-bottom: 10px;
     overflow: hidden;
+    border: 1px solid black;
+   
 }
 
 .carousel__container {
     display: flex;
     transition: transform 0.5s ease;
-    height: 580px;
+    height: auto;
     
 }
 
 .carousel__item {
     width: 100%; 
-    height: 580px;
-    object-fit: cover;
+    height: auto; 
+    max-height: 580px; 
+    object-fit: contain; 
     flex-shrink: 0; 
-    border-radius: 10px;
-    object-position: center; 
+    
+    object-position: center;
 }
 
-
-.carousel__btn {
+.carousel__indicators {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    padding: 15px;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.carousel__indicator {
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
     cursor: pointer;
-    z-index: 10;
-    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
 }
 
-.carousel__btn--prev {
-    left: 10px;
+.carousel__indicator.active {
+    background-color: white;
 }
 
-.carousel__btn--next {
-    right: 10px;
-}
 
 
 
@@ -269,11 +256,10 @@ body{
 /* About2 section */ 
 
 .about2 {
-    background-color: #f5f5f5;
-    text-align: center;
+    padding: 10px 25px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .about2__content{
@@ -282,7 +268,7 @@ body{
 
 .about2__title {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 3.3rem;
+    font-size: 2.8rem;
     margin-bottom: 20px;
     color: black;
 }
@@ -291,8 +277,9 @@ body{
     max-width: 800px;
     line-height: 1.6;
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
+    text-align:start;
 }
 
 .about2__photos {
@@ -348,13 +335,9 @@ body{
     height: 220px;
 }
 
-.about2__title {
-    font-size: 2.5rem;
-}
 
-.about2__text {
-    font-size: 1.3rem;
-}
+
+
 
 
 /* Ajuste para pantallas pequeñas */
@@ -427,8 +410,8 @@ body{
 .titulo__telefono {
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 3.2rem;
-    text-align: left; /* Alinea el texto a la izquierda */
-    width: 100%; /* Ocupa todo el ancho disponible */
+    text-align: left; 
+    width: 100%;
     letter-spacing: 1px; 
     text-transform: uppercase;
 }

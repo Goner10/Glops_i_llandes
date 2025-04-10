@@ -36,61 +36,86 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Carrusel (si existe en la página)
+
     const carousel = document.querySelector('.carousel__container');
-    if (carousel) {
-        const prevBtn = document.querySelector('.carousel__btn--prev');
-        const nextBtn = document.querySelector('.carousel__btn--next');
-        let currentIndex = 0;
-
-        function updateCarousel() {
-            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-
-        nextBtn?.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % document.querySelectorAll('.carousel__item').length;
+if (carousel) {
+    const items = document.querySelectorAll('.carousel__item');
+    const indicatorsContainer = document.querySelector('.carousel__indicators');
+    let currentIndex = 0;
+    
+    // Crear indicadores
+    items.forEach((_, index) => {
+        const indicator = document.createElement('div');
+        indicator.classList.add('carousel__indicator');
+        if (index === 0) indicator.classList.add('active');
+        
+        indicator.addEventListener('click', () => {
+            currentIndex = index;
             updateCarousel();
+            updateIndicators();
         });
-
-        prevBtn?.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + document.querySelectorAll('.carousel__item').length) % 
-                          document.querySelectorAll('.carousel__item').length;
-            updateCarousel();
-        });
-
-        let autoPlayInterval = setInterval(() => {
-            currentIndex = (currentIndex + 1) % document.querySelectorAll('.carousel__item').length;
-            updateCarousel();
-        }, 5000);
-
-        carousel.addEventListener('mouseenter', () => {
-            clearInterval(autoPlayInterval);
-        });
-
-        carousel.addEventListener('mouseleave', () => {
-            autoPlayInterval = setInterval(() => {
-                currentIndex = (currentIndex + 1) % document.querySelectorAll('.carousel__item').length;
-                updateCarousel();
-            }, 5000);
+        
+        indicatorsContainer.appendChild(indicator);
+    });
+    
+    const indicators = document.querySelectorAll('.carousel__indicator');
+    
+    function updateCarousel() {
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+    
+    function updateIndicators() {
+        indicators.forEach((ind, index) => {
+            if (index === currentIndex) {
+                ind.classList.add('active');
+            } else {
+                ind.classList.remove('active');
+            }
         });
     }
-
-    const botonesAcordeon = document.querySelectorAll('.acordeon-titulo');
-
-    botonesAcordeon.forEach(boton => {
-        boton.addEventListener('click', () => {
-            const contenido = boton.nextElementSibling;
-
-            // Cierra todos los paneles excepto el actual
-            document.querySelectorAll('.acordeon-contenido').forEach(panel => {
-                if (panel !== contenido) {
-                    panel.classList.remove('activo');
-                }
-            });
-
-            // Alterna el panel clicado
-            contenido.classList.toggle('activo');
-        });
+    
+    // Agregar funcionalidad de swipe para móviles
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
     });
-
-
+    
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        if (touchEndX < touchStartX) {
+            // Swipe izquierda (siguiente)
+            currentIndex = (currentIndex + 1) % items.length;
+        } else if (touchEndX > touchStartX) {
+            // Swipe derecha (anterior)
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+        }
+        updateCarousel();
+        updateIndicators();
+    }
+    
+    // Auto-reproducción
+    let autoPlayInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateCarousel();
+        updateIndicators();
+    }, 3000); // Cambio cada 3 segundos
+    
+    carousel.addEventListener('mouseenter', () => {
+        clearInterval(autoPlayInterval);
+    });
+    
+    carousel.addEventListener('mouseleave', () => {
+        autoPlayInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel();
+            updateIndicators();
+        }, 3000);
+    });
+}
 });
