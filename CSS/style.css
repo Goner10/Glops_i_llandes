@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; 
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 * {
@@ -103,7 +104,8 @@ body{
     transition: right 0.3s ease;
     z-index: 999;
     opacity: 0.8;
-    font-family: 'Brondi Condensed', sans-serif;
+    
+    
 }
 
 .hero__nav--active {
@@ -118,16 +120,17 @@ body{
 
 .hero__nav-item {
     margin: 25px 0;
-
+   
 }
 
 .hero__nav-link {
-    
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
     color: white;
     text-decoration: none;
     display: block;
     transition: color 0.3s;
-    font-size: 30px;
+    
 }
 .hero__nav-link:hover{
     text-decoration: underline;
@@ -143,9 +146,10 @@ body{
 }
 
 .hero__title {
-    font-family: 'Brondi Condensed', sans-serif;
-    font-size: 3.2rem;
-    letter-spacing: 3px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    
     font-weight: 400;
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */ 
     position: relative;
@@ -155,7 +159,7 @@ body{
 }
 
 .hero__btn {
-    font-family: 'Brondi Condensed', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 1.1rem;
     letter-spacing: 1px;
     background: black;
@@ -230,8 +234,8 @@ body{
 }
 
 .about__title {
-    font-family: 'Brondi Condensed', sans-serif;
-    font-size: 2.9rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.3rem;
     margin-left: 25px;
     margin-bottom: 5px;
     color: black;
@@ -243,8 +247,8 @@ body{
     max-width: 800px;
     margin-bottom: 30px;
     line-height: 1.6;
-    font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
     letter-spacing: 0.5px;
     text-align:start;
 }
@@ -318,8 +322,8 @@ body{
 }
 
 .about2__title {
-    font-family: 'Brondi Condensed', sans-serif;
-    font-size: 2.9rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.3rem;
     margin-bottom: 20px;
     color: black;
 }
@@ -327,8 +331,8 @@ body{
 .about2__text {
     max-width: 800px;
     line-height: 1.6;
-    font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
     letter-spacing: 0.5px;
     text-align: start;
 }
@@ -436,8 +440,8 @@ body{
 
 .boton__reservas {
     
-    font-family: 'Brondi Condensed', sans-serif;
-    font-size: 2.3rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
     
 }
 
@@ -462,8 +466,8 @@ body{
 .titulo__direccion, 
 .titulo__telefono,
 .titulo__insta {
-    font-family: 'Brondi Condensed', sans-serif;
-    font-size: 2.7rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.3rem;
     text-align: left; 
     width: 100%;
     letter-spacing: 0.5px; 
@@ -485,9 +489,8 @@ body{
 .direccion {
     color: black;
     text-decoration: none;
-    font-family: 'Brondi Condensed', sans-serif; 
-    font-size: 1.5rem;
-    letter-spacing: 1px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
     margin-top: 0;
     
 }
@@ -505,7 +508,7 @@ body{
 .telefono{
     color: black;
     text-decoration: none;
-    font-family: 'Brondi Condensed', sans-serif; 
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 1.5rem;
     letter-spacing: 1px;
     margin-top: 0;
@@ -546,8 +549,8 @@ body{
 }
 
 .titulo__reserva {
-    font-family: 'Brondi Condensed', sans-serif;
-    font-size: 2rem;
+    font-family: 'Bebas Neue', sans-serif;
+    
     margin-left: 30px;
     margin-top: 50px;
 }
@@ -566,8 +569,8 @@ body{
 
 .contacto-alternativo {
     margin-top: 20px;
-    font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
     color: #555;
 }
 
@@ -587,8 +590,8 @@ body{
     margin: 0 5px;
     cursor: pointer;
     border-radius: 4px;
-    font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.8rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
     transition: all 0.3s;
 }
 
@@ -648,16 +651,16 @@ margin-bottom: 80px;
 .acordeon-carta {
     max-width: 700px;
     margin: 0 auto;
-    font-family: 'Brondi Condensed', sans-serif;
-    padding: 40px 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 40px 10px;
     margin-bottom: 100px;
 }
 
 .acordeon-titulo {
     background-color: black;
     color: white;
-    font-size: 2.3rem;
-    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 2rem;
+    font-family: 'Bebas Neue', sans-serif;
     text-transform: uppercase;
     border: none;
     width: 100%;
@@ -682,11 +685,11 @@ margin-bottom: 80px;
 
 
 .acordeon-titulo:first-of-type .acordeon-logo {
-    right: 30px; 
+    right: 20px; 
 }
 
 .acordeon-titulo:nth-of-type(2) .acordeon-logo {
-    left: 15px; 
+    left: 10px; 
 }
 
 
