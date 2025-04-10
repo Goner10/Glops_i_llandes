@@ -52,7 +52,7 @@ body{
 
 .hero {
     position: relative;
-    height: 110vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -582,10 +582,26 @@ body{
 
 
 
+
+
+
+
+
+
+
+
 /* Página Carta */
 
 .header__carta {
-    margin-bottom: 180px;
+    margin-bottom: 100px;
+}
+
+.titulo_carta{
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2.5rem;
+margin-bottom: 80px;
 }
 
 .acordeon-carta {
@@ -593,6 +609,7 @@ body{
     margin: 0 auto;
     font-family: 'Brondi Condensed', sans-serif;
     padding: 40px 20px;
+    margin-bottom: 100px;
 }
 
 .acordeon-titulo {
@@ -601,21 +618,64 @@ body{
     font-size: 3rem;
     font-family: 'Brondi Condensed', sans-serif;
     text-transform: uppercase;
-    text-align: center;
     border: none;
     width: 100%;
     cursor: pointer;
     margin-bottom: 10px;
     transition: background-color 0.3s ease;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     padding: 15px 10px;
     position: relative;
-    letter-spacing: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acordeon-logo {
+    height: 60px;
+    width: auto;
+    max-width: 60px;
+    position: absolute; /* Posición absoluta para sacar las imágenes del flujo normal */
+}
+
+
+.acordeon-titulo:first-of-type .acordeon-logo {
+    right: 65px; 
+}
+
+.acordeon-titulo:nth-of-type(2) .acordeon-logo {
+    left: 40px; 
+}
+
+@media (min-width: 768px) {
+    .acordeon-titulo:first-of-type .acordeon-logo {
+        right: 180px; /* Ajusta para pantallas más grandes */
+    }
+    
+    .acordeon-titulo:nth-of-type(2) .acordeon-logo {
+        left: 150px; /* Ajusta para pantallas más grandes */
+    }
+    
+    
+    .acordeon-logo {
+        height: 70px;
+        max-width: 70px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .acordeon-titulo:first-of-type .acordeon-logo {
+        right: 200px;
+    }
+    
+    .acordeon-titulo:nth-of-type(2) .acordeon-logo {
+        left: 180px;
+    }
 }
 
 
 .acordeon-titulo::after {
-    
     position: absolute;
     right: 20px;
     top: 50%;
@@ -642,8 +702,8 @@ body{
 
 /* Cuando está activo */
 .acordeon-contenido.activo {
-    max-height: 2000px;
-    padding: 20px;
+    max-height: 2250px;
+    padding: 20px 10px; /* Reducido el padding horizontal de 20px a 10px */
 }
 
 /* Estilos para la lista simple (GLOPS) */
@@ -651,7 +711,6 @@ body{
     list-style: none;
     padding: 0;
     margin: 0;
-    
 }
 
 .acordeon-contenido > ul > li {
@@ -667,15 +726,40 @@ body{
 }
 
 /* Estilos para el menú de dos columnas - ahora también en móvil */
+
+
+.section_coctel{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    
+}
+.coctel-nombre {
+    flex: 1;
+    
+}
+
+.coctel-precio {
+    margin-left: 10px;
+    white-space: nowrap;
+}
+.coctel-descripcion {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    color: #444;
+    margin: 0 0 8px 0;
+  }
 .menu-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 -5px; 
 }
 
 .menu-column {
-    width: 45%; 
+    width: 49%;
+    padding: 0 5px; /
 }
 
 .menu-section {
@@ -683,14 +767,26 @@ body{
 }
 
 .section-title {
-    font-size: 1.6rem; 
-    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px; 
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
     padding-bottom: 5px;
     border-bottom: 2px solid #000;
     background-color: #000;
     color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.nombre__llandes{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin: 10px 0 5px 0;
+    padding: 3px 0;
 }
 
 .menu-items {
@@ -700,13 +796,14 @@ body{
 }
 
 .menu-items li {
-    font-size: 1.4rem; /* Reducido para móvil */
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
     padding: 6px 0;
     border-bottom: 1px solid #ddd;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Permitir que los precios bajen en pantallas muy pequeñas */
+    flex-wrap: wrap; 
 }
 
 .menu-items li:last-child {
@@ -714,12 +811,21 @@ body{
 }
 
 .price {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-left: 5px;
+    letter-spacing: 1px;
 }
 
-/* Media query para pantallas más grandes - aumentamos algunos tamaños */
+
 @media (min-width: 768px) {
+    .acordeon-contenido.activo {
+        padding: 20px 15px; /* Ajuste para pantallas más grandes */
+    }
+    
+    .menu-column {
+        width: 48%; /* Ligeramente más ancho para pantallas grandes */
+    }
+    
     .section-title {
         font-size: 2rem;
         margin-bottom: 15px;
@@ -729,4 +835,13 @@ body{
         font-size: 1.6rem;
         padding: 8px 0;
     }
+    
+    .price{
+        font-size: 1.6rem;
+    }
+    
+    .nombre__llandes {
+        font-size: 1.4rem;
+    }
 }
+
