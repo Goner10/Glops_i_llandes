@@ -33,6 +33,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    const botonesAcordeon = document.querySelectorAll('.acordeon-titulo');
+ 
+    botonesAcordeon.forEach(boton => {
+        boton.addEventListener('click', () => {
+            const contenido = boton.nextElementSibling;
+
+            // Cierra todos los paneles excepto el actual
+            document.querySelectorAll('.acordeon-contenido').forEach(panel => {
+                if (panel !== contenido) {
+                    panel.classList.remove('activo');
+                }
+            });
+
+            // Alterna el panel clicado
+            contenido.classList.toggle('activo');
+        });
+    });
 
 
     // Carrusel (si existe en la página)
@@ -104,7 +121,7 @@ if (carousel) {
         currentIndex = (currentIndex + 1) % items.length;
         updateCarousel();
         updateIndicators();
-    }, 3000); // Cambio cada 3 segundos
+    }, 4000); // Cambio cada 3 segundos
     
     carousel.addEventListener('mouseenter', () => {
         clearInterval(autoPlayInterval);
@@ -115,7 +132,7 @@ if (carousel) {
             currentIndex = (currentIndex + 1) % items.length;
             updateCarousel();
             updateIndicators();
-        }, 3000);
+        }, 4000);
     });
 }
 });

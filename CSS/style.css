@@ -28,6 +28,9 @@ body{
 .hero {
     position: relative;
     height: 100vh;
+    width: 100%;
+    min-width: 100vw;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -127,7 +130,7 @@ body{
 
 .hero__title {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 6rem;
+    font-size: 3rem;
     font-weight: 400;
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */ 
     position: relative;
@@ -164,7 +167,6 @@ body{
 
 /* About Section */
 .about {
-    
     background-color: #f5f5f5;
     text-align: center;
     margin-bottom: 20px;
@@ -178,7 +180,7 @@ body{
 
 .about__title {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 2.8rem;
+    font-size: 2.9rem;
     margin-left: 25px;
     color: black;
     text-align: start;
@@ -187,12 +189,11 @@ body{
 
 .about__text {
     max-width: 800px;
-    
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     line-height: 1.6;
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
     text-align:start;
 }
 
@@ -203,7 +204,7 @@ body{
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
-    border: 1px solid black;
+    
    
 }
 
@@ -244,7 +245,7 @@ body{
 }
 
 .carousel__indicator.active {
-    background-color: white;
+    background-color: #E2A300;
 }
 
 
@@ -256,10 +257,10 @@ body{
 /* About2 section */ 
 
 .about2 {
-    padding: 10px 25px;
+    
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    
 }
 
 .about2__content{
@@ -268,7 +269,7 @@ body{
 
 .about2__title {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 2.8rem;
+    font-size: 2.9rem;
     margin-bottom: 20px;
     color: black;
 }
@@ -277,8 +278,8 @@ body{
     max-width: 800px;
     line-height: 1.6;
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
     text-align:start;
 }
 
@@ -288,7 +289,7 @@ body{
         "foto1 foto1"
         "foto2 foto3";
     gap: 10px; 
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 
@@ -296,8 +297,8 @@ body{
     grid-area: foto1;
     width: 100%; 
     height: 280px; 
-    overflow: hidden; /* Recorta el exceso de imagen */
-    position: relative; /* Necesario para efectos avanzados */
+    overflow: hidden; 
+    position: relative; 
     
 }
 
@@ -305,9 +306,9 @@ body{
 .foto {
     position: relative;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
     transition: transform 0.3s ease;
-    height: 240px; /* Altura fija para el alargado */
+    height: 240px; 
     width: 100%;
 }
 
