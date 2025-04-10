@@ -349,6 +349,7 @@ body{
     height: 290px; 
     overflow: hidden; 
     position: relative; 
+    border: 2px solid #E2A300;
 }
 
 
@@ -356,6 +357,7 @@ body{
     height: 220px;
     overflow: hidden;
     position: relative;
+    border: 2px solid #E2A300;
 }
 
 .foto2 {
@@ -507,7 +509,7 @@ body{
     font-size: 1.5rem;
     letter-spacing: 1px;
     margin-top: 0;
-    text-decoration: underline;
+    text-decoration: underline #E2A300;
 }
 
 
