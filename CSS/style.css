@@ -342,7 +342,7 @@ body{
     margin-top: 30px;
 }
 
-/* Imagen grande superior */
+
 .foto1 {
     grid-area: foto1;
     width: 100%; 
@@ -351,9 +351,9 @@ body{
     position: relative; 
 }
 
-/* Imágenes inferiores */
+
 .foto2, .foto3 {
-    height: 190px; /* Altura fija para las imágenes inferiores */
+    height: 200px;
     overflow: hidden;
     position: relative;
 }
@@ -746,12 +746,12 @@ margin-bottom: 80px;
 .section_coctel{
     display: flex;
     justify-content: space-between;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     
 }
 .coctel-nombre {
     flex: 1;
-    padding-right: 5px;
+    padding-right: 3px;
 }
 
 .coctel-precio {
