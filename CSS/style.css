@@ -147,8 +147,8 @@ body{
 
 .hero__title {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 3.2rem;
-    letter-spacing: 1px;
+    font-size: 3.5rem;
+    letter-spacing: 1.5px;
     font-weight: 900;
     
     font-weight: 400;
@@ -161,11 +161,11 @@ body{
 
 .hero__btn {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
     background: black;
     color: white;
-    padding: 3px 30px;
+    padding: 3px 50px;
     border-radius: 10px;
     text-decoration: none;
     display: inline-block;
@@ -327,6 +327,7 @@ body{
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 2.9rem;
     margin-bottom: 20px;
+    margin-top: -10px;
     color: black;
 }
 
@@ -456,7 +457,7 @@ body{
     color: black;
     border: 2px solid black;
     border-radius: 5px;
-    padding: 5px;
+    padding: 0 15px;
 }
 
 
@@ -473,13 +474,14 @@ body{
 .titulo__telefono,
 .titulo__insta {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 2.9rem;
+    font-size: 3.1rem;
+    letter-spacing: 1px;
     text-align: left; 
     width: 100%;
      
     text-transform: uppercase;
-    margin-bottom: 5px; 
     margin-top: 15px; 
+    margin-bottom: -10px;
 }
 
 
@@ -496,7 +498,8 @@ body{
     color: black;
     text-decoration: none;
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
     margin-top: 0;
     
     
@@ -517,11 +520,10 @@ body{
     color: black;
     text-decoration: none;
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     letter-spacing: 1px;
     margin-top: 0;
     text-decoration: underline #E2A300;
-    margin-bottom: 15px;
 }
 
 
