@@ -4,9 +4,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // Menú hamburguesa
     const mobileMenu = document.getElementById('mobile-menu');
     const navMenu = document.getElementById('nav-menu');
-    mobileMenu.addEventListener('click', function() {
+    
+    mobileMenu.addEventListener('click', function(e) {
         this.classList.toggle('hero__menu-toggle--active');
         navMenu.classList.toggle('hero__nav--active');
+        e.stopPropagation(); // Previene que el clic llegue al documento
+    });
+    
+    // Evitar que los clics dentro del menú lo cierren
+    navMenu.addEventListener('click', function(e) {
+        e.stopPropagation(); // Previene que el clic llegue al documento
+    });
+    
+    // Cerrar el menú cuando se hace clic en cualquier parte fuera del menú
+    document.addEventListener('click', function() {
+        if (navMenu.classList.contains('hero__nav--active')) {
+            mobileMenu.classList.remove('hero__menu-toggle--active');
+            navMenu.classList.remove('hero__nav--active');
+        }
     });
 
 
