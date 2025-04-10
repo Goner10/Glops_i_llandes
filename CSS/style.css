@@ -490,7 +490,7 @@ body{
     width: 100%;
      
     text-transform: uppercase;
-    margin-top: -15px; 
+    margin-top: -20px; 
     margin-bottom: -10px;
 }
 
@@ -504,8 +504,8 @@ body{
 }
 
 .logo__google img{
-    width: 65px;
-    height: 65px;
+    width: 62px;
+    height: 62px;
     
     margin-top: 15px; 
 }
