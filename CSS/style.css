@@ -1,17 +1,22 @@
-* {
+html, body {
+    width: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; 
+}
+
+* {
     box-sizing: border-box;
 }
 
 @font-face {
     font-family: 'Brondi Condensed';
-    src: url('../fonts/Brondi-Condensed-Regular.woff2') format('woff2'),
-         url('../fonts/Brondi-Condensed-Regular.woff') format('woff');
+    src: url('fonts/Brondi-Condensed-Regular.woff2') format('woff2'),
+         url('fonts/Brondi-Condensed-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-}
+  }
 
 
 
@@ -28,8 +33,8 @@ body{
 .hero {
     position: relative;
     height: 100vh;
-    width: 100%;
-    min-width: 100vw;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -41,7 +46,7 @@ body{
 
 .hero::before {
     content: '';
-    background-image: url(/img/barraGlops.jpeg);
+    background-image: url(../img/barraGlops.jpeg);
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -102,7 +107,7 @@ body{
 }
 
 .hero__nav--active {
-    right: 0;
+    right: 0 !important;
     
 }
 
@@ -128,28 +133,41 @@ body{
     text-decoration: underline;
 }
 
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .hero__title {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 3rem;
+    font-size: 3.2rem;
+    letter-spacing: 3px;
     font-weight: 400;
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */ 
     position: relative;
-    display: inline-block;
+    display: block;
+    margin-bottom: 5px; /* Añade este margen específico de 15px */
+    margin-top: 0;
 }
 
 .hero__btn {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     letter-spacing: 2px;
     background: black;
+    
     color: white;
-    padding: 3px 50px;
+    padding: 3px 40px;
     border-radius: 10px;
     text-decoration: none;
-    margin-top: 20px;
     display: inline-block;
     transition: all 0.3s;
     position: relative;
+    margin-top: 0;
 }
 .hero__btn:hover {
     background: #f5f5f5; 
@@ -158,7 +176,40 @@ body{
 }
 
 
+@media (min-width: 768px) {
+    .hero__nav {
+        width: 30%; /* Reducción del ancho en pantallas grandes */
+        right: -30%; /* Ajustado para coincidir con el nuevo ancho */
+    }
+    
+    .hero__nav-link {
+        font-size: 2rem; /* Fuente ligeramente más pequeña en pantallas grandes */
+    }
+    
+    .hero__nav--active {
+        right: 0;
+    }
+    .hero__title {
+        font-size: 4rem;
+    }
+    
+    .hero__btn {
+        font-size: 1.8rem;
+        padding: 5px 60px;
+    }
+}
 
+@media (min-width: 1024px) {
+    .hero__nav {
+        width: 25%; /* Aún más estrecho en pantallas muy grandes */
+        right: -25%; /* Ajustado para coincidir */
+    }
+    
+    .hero__menu-toggle {
+        top: 40px; /* Un poco más abajo en pantallas grandes */
+        right: 40px; /* Más alejado del borde */
+    }
+}
 
 
 
@@ -174,7 +225,7 @@ body{
 }
 
 .about__content{
-    padding: 10px 25px;
+    padding: 10px 25px 5px;
     
 }
 
@@ -182,6 +233,7 @@ body{
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 2.9rem;
     margin-left: 25px;
+    margin-bottom: 5px;
     color: black;
     text-align: start;
     
@@ -200,11 +252,10 @@ body{
 /* Carrusel */
 .carousel {
     position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    max-width: none;
     overflow: hidden;
-    
    
 }
 
@@ -216,12 +267,11 @@ body{
 }
 
 .carousel__item {
-    width: 100%; 
+    width: 100vw; 
     height: auto; 
     max-height: 580px; 
-    object-fit: contain; 
+    object-fit: cover; 
     flex-shrink: 0; 
-    
     object-position: center;
 }
 
@@ -260,6 +310,9 @@ body{
     
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px; /* Añadir espacio después de esta sección */
+    position: relative;
+    z-index: 1;
     
 }
 
@@ -357,24 +410,25 @@ body{
 
 .reservas {
     position: relative; 
-    height: 140vh; 
+    height: auto; 
+    min-height: 100vh;
     display: flex;
-    align-items: center; 
-    justify-content: center; 
+    align-items: flex-start; 
+    padding-top: 10px; 
+    z-index: 2;
 }
 
 .contenedor__reservas {
     display: flex;
     flex-direction: column; 
     align-items: center;
-    text-align: center;
-    position: relative;
     width: 100%; 
     max-width: 1200px;
 }
 
 .logo__reservas {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    
 }
 
 .logo__reservas img {
@@ -387,6 +441,7 @@ body{
     
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 2.3rem;
+    
 }
 
 .boton__reservas_a {
@@ -402,28 +457,25 @@ body{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 60px; 
+    margin-top: 20px; 
     width: 100%;
-    padding-left: 60px;
+    padding-left: 20px;
     box-sizing: border-box;
 }
 .titulo__direccion, 
-.titulo__telefono {
+.titulo__telefono,
+.titulo__insta {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 3.2rem;
+    font-size: 2.7rem;
     text-align: left; 
     width: 100%;
-    letter-spacing: 1px; 
+    letter-spacing: 0.5px; 
     text-transform: uppercase;
+    margin-bottom: 5px; 
+    margin-top: 15px; 
 }
 
-.titulo__insta{
-    font-family: 'Brondi Condensed', sans-serif;
-    font-size: 3.2rem;
-    text-align: left; 
-    width: 100%; 
-    margin-bottom: 10px;
-}
+
 
 .logo__insta img{
     width: 60px;
@@ -434,54 +486,48 @@ body{
 
 
 .direccion {
-    
-    font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.8rem;
-    text-align: left; /* Alinea el texto a la izquierda */
-    width: 100%;
+    color: black;
+    text-decoration: none;
+    font-family: 'Brondi Condensed', sans-serif; 
+    font-size: 1.5rem;
     letter-spacing: 1px;
+    margin-top: 0;
+    
+}
+.direccion-link {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.direccion-link:hover {
+    text-decoration: underline;
+    color: #333;
 }
 
 .telefono{
     color: black;
     text-decoration: none;
     font-family: 'Brondi Condensed', sans-serif; 
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
+    margin-top: 0;
+    text-decoration: underline;
 }
 
 
 .mapa-interactivo{
     margin-top: 30px;
     width: 100%;
+    height: 400px;
 }
 
 
 
-
-
-/* Seccion Footer */
-
-
-.contenedor__footer {
-    background-color: #333333;
-    height: 150px;
-    display: flex;
-    flex-direction: column;  
-    align-items: center;     
-    justify-content: center; 
-    gap: 15px;              /* Espacio entre elementos */
-    padding: 20px;          
+.mapa-interactivo iframe {
+    width: 100%;
+    height: 400px; /* Aumentado altura */
 }
-
-
-.foto_footer {
-    width: 90px;
-    height: 90px;
-    
-}
-
-
 
 
 
@@ -510,25 +556,34 @@ body{
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 2rem;
     margin-left: 30px;
+    margin-top: 50px;
 }
 
 .covermanager-widget {
-    margin: 30px 0;
+    margin: 20px 0;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+}
+.covermanager-widget iframe {
+    min-height: 700px; /* Altura mínima para asegurar que el calendario se vea completo */
+    width: 100%;
 }
 
 .contacto-alternativo {
     margin-top: 20px;
-    font-family: 'Akkurat', sans-serif;
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.5rem;
     color: #555;
 }
 
 /* Selector de idioma */
 .language-toggle {
-    margin: 20px 0;
-    text-align: center;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     
 }
 
@@ -553,17 +608,30 @@ body{
     display: none;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .covermanager-widget iframe {
-        height: 700px !important;
+        height: 750px !important; /* Aumentado un poco para asegurar que todo se vea */
     }
     
     .titulo__reserva {
-        font-size: 1.8rem;
+        font-size: 2rem;
+        padding-top: 10px;
     }
 }
 
+@media (min-width: 768px) {
+    .header_carta {
+        padding-top: 100px; /* Más espacio en pantallas grandes */
+    }
+    
+    .titulo__reserva {
+        font-size: 3rem;
+    }
+    
+    .covermanager-widget iframe {
+        min-height: 650px; /* Ajustado para pantallas grandes */
+    }
+}
 
 
 
@@ -599,7 +667,7 @@ margin-bottom: 80px;
 .acordeon-titulo {
     background-color: black;
     color: white;
-    font-size: 3rem;
+    font-size: 2.3rem;
     font-family: 'Brondi Condensed', sans-serif;
     text-transform: uppercase;
     border: none;
@@ -607,8 +675,8 @@ margin-bottom: 80px;
     cursor: pointer;
     margin-bottom: 10px;
     transition: background-color 0.3s ease;
-    letter-spacing: 5px;
-    padding: 15px 10px;
+    letter-spacing: 3px;
+    padding: 15px 40px;
     position: relative;
     display: flex;
     align-items: center;
@@ -616,47 +684,23 @@ margin-bottom: 80px;
 }
 
 .acordeon-logo {
-    height: 60px;
+    height: 50px;
     width: auto;
-    max-width: 60px;
-    position: absolute; /* Posición absoluta para sacar las imágenes del flujo normal */
+    max-width: 50px;
+    position: absolute;
+    z-index: 5;
 }
 
 
 .acordeon-titulo:first-of-type .acordeon-logo {
-    right: 65px; 
+    right: 30px; 
 }
 
 .acordeon-titulo:nth-of-type(2) .acordeon-logo {
-    left: 40px; 
-}
-
-@media (min-width: 768px) {
-    .acordeon-titulo:first-of-type .acordeon-logo {
-        right: 180px; /* Ajusta para pantallas más grandes */
-    }
-    
-    .acordeon-titulo:nth-of-type(2) .acordeon-logo {
-        left: 150px; /* Ajusta para pantallas más grandes */
-    }
-    
-    
-    .acordeon-logo {
-        height: 70px;
-        max-width: 70px;
-    }
+    left: 15px; 
 }
 
 
-@media (min-width: 1024px) {
-    .acordeon-titulo:first-of-type .acordeon-logo {
-        right: 200px;
-    }
-    
-    .acordeon-titulo:nth-of-type(2) .acordeon-logo {
-        left: 180px;
-    }
-}
 
 
 .acordeon-titulo::after {
@@ -715,12 +759,12 @@ margin-bottom: 80px;
 .section_coctel{
     display: flex;
     justify-content: space-between;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     
 }
 .coctel-nombre {
     flex: 1;
-    
+    padding-right: 5px;
 }
 
 .coctel-precio {
@@ -728,9 +772,9 @@ margin-bottom: 80px;
     white-space: nowrap;
 }
 .coctel-descripcion {
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
+    font-size: 0.8rem;
     color: #444;
+    line-height: 1.3;
     margin: 0 0 8px 0;
   }
 .menu-container {
@@ -738,12 +782,13 @@ margin-bottom: 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 -5px; 
+    margin: 0; 
 }
 
 .menu-column {
     width: 49%;
-    padding: 0 5px; /
+    padding: 0; 
+    
 }
 
 .menu-section {
@@ -780,14 +825,12 @@ margin-bottom: 80px;
 }
 
 .menu-items li {
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
+    font-size: 0.9rem;
     padding: 6px 0;
     border-bottom: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Asegúrate de que sea flex */
+    justify-content: space-between; /* Envía el precio al extremo derecho */
     align-items: center;
-    flex-wrap: wrap; 
 }
 
 .menu-items li:last-child {
@@ -795,19 +838,40 @@ margin-bottom: 80px;
 }
 
 .price {
-    font-size: 1rem;
-    margin-left: 5px;
-    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin-left: 10px; /* Añade espacio entre el nombre y el precio */
+    white-space: nowrap;
 }
 
 
 @media (min-width: 768px) {
+    /* Estilos del acordeón */
     .acordeon-contenido.activo {
-        padding: 20px 15px; /* Ajuste para pantallas más grandes */
+        padding: 20px 15px;
     }
     
+    .acordeon-titulo {
+        font-size: 3rem;
+        letter-spacing: 5px;
+        padding: 15px 10px;
+    }
+    
+    .acordeon-logo {
+        height: 70px;
+        max-width: 70px;
+    }
+    
+    .acordeon-titulo:first-of-type .acordeon-logo {
+        right: 180px;
+    }
+    
+    .acordeon-titulo:nth-of-type(2) .acordeon-logo {
+        left: 150px;
+    }
+    
+    /* Estilos del menú */
     .menu-column {
-        width: 48%; /* Ligeramente más ancho para pantallas grandes */
+        width: 48%;
     }
     
     .section-title {
@@ -815,13 +879,21 @@ margin-bottom: 80px;
         margin-bottom: 15px;
     }
     
+    .section_coctel {
+        font-size: 1.8rem;
+    }
+    
+    .coctel-descripcion {
+        font-size: 0.9rem;
+    }
+    
     .menu-items li {
-        font-size: 1.6rem;
+        font-size: 1.6rem;  /* Mantener el tamaño más grande para mejor legibilidad */
         padding: 8px 0;
     }
     
-    .price{
-        font-size: 1.6rem;
+    .price {
+        font-size: 1.6rem;  /* Mantener el tamaño más grande para mejor legibilidad */
     }
     
     .nombre__llandes {
@@ -829,3 +901,12 @@ margin-bottom: 80px;
     }
 }
 
+@media (min-width: 1024px) {
+    .acordeon-titulo:first-of-type .acordeon-logo {
+        right: 200px;
+    }
+    
+    .acordeon-titulo:nth-of-type(2) .acordeon-logo {
+        left: 180px;
+    }
+}
