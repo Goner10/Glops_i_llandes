@@ -147,15 +147,15 @@ body{
 
 .hero__title {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 3.5rem;
-    letter-spacing: 1.5px;
+    font-size: 3.8rem;
+    letter-spacing: 2.5px;
     font-weight: 900;
-    
+    color: #E2A300;
     font-weight: 400;
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */ 
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     position: relative;
     display: block;
-    margin-bottom: 25px; /* Añade este margen específico de 15px */
+    margin-bottom: 25px; 
     margin-top: 0;
 }
 
@@ -244,15 +244,18 @@ body{
     
 }
 
+
 .about__text {
     max-width: 800px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     line-height: 1.6;
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.7rem;
     letter-spacing: 0.3px;
     text-align:start;
 }
+
+
 
 
 /* Carrusel */
