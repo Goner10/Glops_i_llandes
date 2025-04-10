@@ -910,3 +910,25 @@ margin-bottom: 80px;
         left: 180px;
     }
 }
+
+
+.footer {
+    background-color: #000000;
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    font-family: 'Brondi Condensed', sans-serif;
+    margin-top: 30px;
+}
+
+.footer__copyright {
+    font-size: 0.9rem;
+    margin: 0 0 5px 0;
+}
+
+.footer__credits {
+    font-size: 0.8rem;
+    margin: 0;
+    opacity: 0.8;
+    color: #E2A300;
+}
