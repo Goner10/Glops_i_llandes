@@ -150,9 +150,9 @@ body{
     font-size: 3.8rem;
     letter-spacing: 2.5px;
     font-weight: 900;
-    color: #E2A300;
+    color: black;
     font-weight: 400;
-     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); 
     position: relative;
     display: block;
     margin-bottom: 25px; 
@@ -235,9 +235,9 @@ body{
 
 .about__title {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 3rem;
-    letter-spacing: 1px;
-    margin-left: 25px;
+    font-size: 2.9rem;
+    letter-spacing: 0.8px;
+    margin-left: 23px;
     margin-bottom: 1px;
     color: black;
     text-align: start;
@@ -247,7 +247,8 @@ body{
 
 .about__text {
     max-width: 800px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    margin-top: -10px;
     line-height: 1.6;
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.7rem;
@@ -332,7 +333,7 @@ body{
     font-size: 3rem;
     letter-spacing: 1px;
     margin-bottom: 20px;
-    margin-top: -10px;
+    margin-top: 15px;
     color: black;
 }
 
@@ -343,7 +344,8 @@ body{
     font-size: 1.7rem;
     letter-spacing: 0.3px;
     text-align: start;
-    margin-bottom: 10px; 
+    margin-bottom: 15px; 
+    margin-top: -10px;
 }
 .about2__text + .about2__text {
     margin-top: 0; /* Elimina el margen superior para párrafos consecutivos */
@@ -441,7 +443,7 @@ body{
 
 .logo__reservas {
     margin-bottom: 20px;
-    
+    margin-top: 10px;
 }
 
 .logo__reservas img {
