@@ -677,10 +677,11 @@ body{
 
 .titulo_carta{
 display: flex;
-justify-content: center;
-align-items: center;
-font-size: 2.5rem;
-margin-bottom: 80px;
+
+align-items: flex-start;
+font-size: 1.4rem;
+letter-spacing: 0.5px;
+margin-bottom: 60px;
 }
 
 .acordeon-carta {
