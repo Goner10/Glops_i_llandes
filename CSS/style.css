@@ -332,7 +332,7 @@ body{
     position: absolute;
     color: #E2A300;
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 2.5rem !important;  /* Aumentado el tamaño de fuente */
+    font-size: 2.8rem !important;  /* Aumentado el tamaño de fuente */
     z-index: 10;
     min-width: 105px; 
     text-align: center;
