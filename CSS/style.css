@@ -267,14 +267,14 @@ body{
     margin-left: calc(-50vw + 50%);
     max-width: none;
     overflow: hidden;
-   
+    
 }
 
 .carousel__container {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out;
     height: auto;
-    
+    will-change: transform; 
 }
 
 .carousel__item {
@@ -287,31 +287,97 @@ body{
     border: 2px solid #E2A300;
 }
 
-.carousel__indicators {
+.carousel__arrow {
     position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.carousel__indicator {
-    width: 12px;
-    height: 12px;
-    background-color: black;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: #E2A300;
+    border: none;
     border-radius: 50%;
+    font-size: 24px;
+    display: none;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    z-index: 10;
+    opacity: 0.7;
+    transition: opacity 0.3s, background-color 0.3s;
 }
 
-.carousel__indicator.active {
-    background-color: #E2A300;
+.carousel__arrow:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel__arrow:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(226, 163, 0, 0.5);
+}
+
+.carousel__arrow--prev {
+    left: 15px;
+}
+
+.carousel__arrow--next {
+    right: 15px;
 }
 
 
 
+
+.carousel__counter {
+    position: absolute;
+    color: #E2A300;
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 2.5rem !important;  /* Aumentado el tamaño de fuente */
+    z-index: 10;
+    min-width: 105px; 
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .carousel__arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+    
+    .carousel__arrow--prev {
+        left: 10px;
+    }
+    
+    .carousel__arrow--next {
+        right: 10px;
+    }
+    
+    .carousel__counter {
+        bottom: 10px;
+        right: 10px;
+        font-size: 1.1rem;
+        padding: 4px 10px;
+    }
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 480px) {
+    .carousel__arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+    
+    .carousel__counter {
+        bottom: 8px;
+        right: 8px;
+        font-size: 1rem;
+        padding: 3px 8px;
+    }
+}
 
 
 /* About2 section */ 
