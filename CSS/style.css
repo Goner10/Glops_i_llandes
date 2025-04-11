@@ -561,7 +561,7 @@ body{
 
 .mapa-interactivo iframe {
     width: 100%;
-    height: 400px; /* Aumentado altura */
+    height: 400px; 
 }
 
 
@@ -677,11 +677,12 @@ body{
 
 .titulo_carta{
 display: flex;
-
-align-items: flex-start;
-font-size: 1.4rem;
-letter-spacing: 0.5px;
+justify-content: center;
+align-items: center;
+font-size: 2.2rem;
+letter-spacing: 1.5px;
 margin-bottom: 60px;
+margin-left: 23px;
 }
 
 .acordeon-carta {
@@ -946,7 +947,7 @@ margin-bottom: 60px;
     text-align: center;
     color: white;
     font-family: 'Brondi Condensed', sans-serif;
-    margin-top: 10px;
+    margin-top: 3px;
 }
 
 .footer__copyright {
