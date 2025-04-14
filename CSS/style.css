@@ -825,7 +825,7 @@ margin-left: 23px;
 
 /* Cuando está activo */
 .acordeon-contenido.activo {
-    max-height: 2250px;
+    max-height: 5250px;
     padding: 20px 10px; /* Reducido el padding horizontal de 20px a 10px */
 }
 
@@ -848,7 +848,7 @@ margin-left: 23px;
     border-bottom: none;
 }
 
-/* Estilos para el menú de dos columnas - ahora también en móvil */
+/* Estilos para el menú de dos columnas */
 
 
 .section_coctel{
@@ -873,6 +873,149 @@ margin-left: 23px;
     line-height: 1.3;
     margin: 0 0 8px 0;
   }
+
+/* Divisor con línea y texto */
+.bebidas-divisor {
+    display: flex;
+    align-items: center;
+    margin: 40px 0 25px;
+    width: 100%;
+  }
+  
+  .divisor-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #aad2c9;
+    border: none;
+  }
+  
+  .divisor-text {
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.8rem;
+    padding: 0 15px;
+    color: #000;
+    letter-spacing: 1px;
+  }
+  
+  /* Cabecera de cada sección de bebidas */
+  .bebidas-header {
+    width: 100%;
+    text-align: center;
+    margin: 35px 0 15px;
+  }
+  
+  /* Sección de bebidas */
+  .bebidas-section {
+    margin-bottom: 30px;
+  }
+  
+  .bebidas-title {
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid  #aad2c9;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  /* Lista de bebidas */
+  .bebidas-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .bebida-item {
+    font-size: 1.2rem;
+    padding: 5px 0;
+    border-bottom: 1.5px dotted  #aad2c9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .bebida-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* Nombre y descripción de bebidas */
+  .bebida-nombre {
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .bebida-descripcion {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: 300;
+    margin: -2px 0 8px 0;
+    padding: 0;
+    font-style: italic;
+  }
+  
+  /* Precios */
+  .bebida-precio {
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    margin-left: 10px;
+    color: #000;
+    font-weight: 500;
+  }
+
+  .bodega-item {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 10px;
+  }
+  
+  .bodega-item:first-child {
+    border-top: none;
+    margin-top: 0;
+  }
+  
+  .info-item {
+    border-bottom: none;
+    padding: 3px 0;
+  }
+  
+  .info-item .bebida-info {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 300;
+  }
+  
+
+  /* Información de precios para destilados */
+.destilados-info {
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-style: italic;
+  }
+  
+  /* Para destilados con múltiples precios */
+  .bebida-precio-multiple {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .precio-combinado, .precio-copa, .precio-chupito {
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.2rem;
+    color: #000;
+  }
+
+
 .menu-container {
     width: 100%;
     display: flex;
@@ -1081,6 +1224,24 @@ margin-left: 23px;
         font-size: 0.9rem; /* Tamaño para tablets */
         padding-left: 0; /* Mantener alineado con título */
     }
+
+    .bebidas-title {
+        font-size: 1.4rem;
+      }
+      
+      .precio-leyenda-item {
+        font-size: 0.9rem;
+        width: 70px;
+      }
+      
+      .precio-combinado, .precio-copa, .precio-chupito {
+        font-size: 1.1rem;
+        width: 70px;
+      }
+      
+      .precio-leyenda {
+        padding-right: 10px;
+      }
 }
 
 @media (min-width: 1024px) {
