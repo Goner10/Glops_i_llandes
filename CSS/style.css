@@ -150,8 +150,8 @@ body{
     display: block;
     margin-bottom: 25px;
     margin-top: 0;
-    width: 30%; /* Reducido de 80% a 60% */
-    max-width: 250px; /* Reducido de 400px a 300px */
+    width: 30%; 
+    max-width: 200px; 
 }
 
 .hero__title-image {
