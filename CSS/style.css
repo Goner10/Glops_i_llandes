@@ -148,10 +148,10 @@ body{
 .hero__title-img {
     position: relative;
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     margin-top: 0;
-    width: 40%; 
-    max-width: 250px; 
+    width: 45%; 
+    max-width: 300px; 
 }
 
 .hero__title-image {
