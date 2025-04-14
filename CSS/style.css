@@ -145,6 +145,21 @@ body{
     width: 100%;
 }
 
+.hero__title-img {
+    position: relative;
+    display: block;
+    margin-bottom: 25px;
+    margin-top: 0;
+    width: 30%; /* Reducido de 80% a 60% */
+    max-width: 250px; /* Reducido de 400px a 300px */
+}
+
+.hero__title-image {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.5));
+}
+/*
 .hero__title {
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 3.8rem;
@@ -158,6 +173,7 @@ body{
     margin-bottom: 25px; 
     margin-top: 0;
 }
+    */
 
 .hero__btn {
     font-family: 'Brondi Condensed', sans-serif;
@@ -396,8 +412,8 @@ body{
 
 .about2__title {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 3rem;
-    letter-spacing: 1px;
+    font-size: 2.7rem;
+    letter-spacing: 0.8px;
     margin-bottom: 20px;
     margin-top: 15px;
     color: black;
@@ -945,7 +961,7 @@ margin-left: 23px;
   .bebida-nombre {
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.3rem;
-    
+    max-width: 70%;
   }
   
   .bebida-descripcion {
@@ -1006,13 +1022,16 @@ margin-left: 23px;
   /* Para destilados con múltiples precios */
   .bebida-precio-multiple {
     display: flex;
-    gap: 10px;
+    gap: 6px;
+    min-width: 28%; 
+  justify-content: flex-end;
   }
   
   .precio-combinado, .precio-copa, .precio-chupito {
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.3rem;
     color: #000;
+    
   }
 
 
@@ -1089,12 +1108,7 @@ margin-left: 23px;
     flex: 1;
     min-width: 0; /* Importante para que text-overflow funcione */
 }
-.allergens {
-    font-size: 0.8rem;
-    color: #E2A300;
-    margin-left: 5px;
-    font-weight: normal;
-}
+
 
 /* Estilo para las descripciones de platos */
 .dish-descripcion {
@@ -1117,6 +1131,13 @@ margin-left: 23px;
 }
 
 /* Leyenda de alérgenos */
+
+.allergens {
+    font-size: 0.8rem;
+    color: #E2A300;
+    margin-left: 5px;
+    font-weight: normal;
+}
 .allergens-legend {
     margin-top: 30px;
     padding-top: 10px;
@@ -1241,7 +1262,40 @@ margin-left: 23px;
       .precio-leyenda {
         padding-right: 10px;
       }
+
+
+      .allergens-legend {
+        width: 80%;
+        margin: 40px auto 20px;
+        padding: 15px;
+        border-width: 3px;
+    }
+    
+    .allergens-legend h4 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+    
+    .allergens-legend ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .allergens-legend li {
+        font-size: 1.1rem;
+        margin: 0 15px 10px;
+        width: calc(33% - 30px);
+    }
+    
+    .allergen-number {
+        font-size: 1.2rem;
+        margin-right: 8px;
+    }
+
 }
+
+
 
 @media (min-width: 1024px) {
     .acordeon-titulo:first-of-type .acordeon-logo {
@@ -1255,6 +1309,26 @@ margin-left: 23px;
     .dish-descripcion {
         font-size: 1rem; /* Tamaño para desktop */
         padding-left: 0; /* Mantener alineado con título */
+    }
+    .allergens-legend {
+        width: 90%;
+        padding: 10px 20px;
+        border-width: 4px;
+    }
+    
+    .allergens-legend h4 {
+        font-size: 1.8rem;
+        letter-spacing: 1.5px;
+    }
+    
+    .allergens-legend li {
+        font-size: 1.2rem;
+        margin: 0 30px 12px;
+        width: calc(25% - 40px);
+    }
+    
+    .allergen-number {
+        font-size: 1.3rem;
     }
 }
 
