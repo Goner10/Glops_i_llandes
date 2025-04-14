@@ -966,7 +966,8 @@ margin-left: 23px;
   
   .bebida-descripcion {
     font-family: 'Poppins', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    font-weight: 500;
     color: #666;
     font-weight: 300;
     margin: -2px 0 8px 0;
@@ -1001,10 +1002,11 @@ margin-left: 23px;
   }
   
   .info-item .bebida-info {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.85rem;
-    color: #666;
-    font-weight: 300;
+    font-size: 0.7rem;
+    font-family: 'Poppins';
+    color: #444;
+    line-height: 1.3;
+    
   }
   
 
