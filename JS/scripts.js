@@ -251,4 +251,41 @@ document.addEventListener('DOMContentLoaded', function() {
         // Iniciar la reproducción automática
         startAutoPlay();
     }
+
+    function adjustReservationIframe() {
+        const reservationIframe = document.querySelector('.covermanager-widget iframe');
+        if (reservationIframe) {
+            const windowWidth = window.innerWidth;
+            
+            if (windowWidth <= 360) {
+                reservationIframe.style.height = '850px';
+            } else if (windowWidth <= 480) {
+                reservationIframe.style.height = '750px';
+            } else if (windowWidth <= 768) {
+                reservationIframe.style.height = '700px';
+            } else {
+                reservationIframe.style.height = '650px';
+            }
+        }
+    }
+    
+    // Ejecutar al cargar y cuando cambie el tamaño de la ventana
+    if (document.querySelector('.covermanager-widget')) {
+        adjustReservationIframe();
+        window.addEventListener('resize', adjustReservationIframe);
+    }
+    
+    // Evitar scroll cuando el menú está abierto en móviles
+    const menuToggle = document.getElementById('mobile-menu');
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            document.body.classList.toggle('menu-open');
+            
+            if (document.body.classList.contains('menu-open')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+    }
 });
