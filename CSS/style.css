@@ -1731,6 +1731,11 @@ margin-left: 23px;
 
 
 
+
+
+
+  /* Section Footer */ 
+
 .footer {
     background-color: #000000;
     padding: 15px 0;
@@ -1756,3 +1761,32 @@ margin-left: 23px;
     color: inherit; 
 }
 }
+
+@media (max-width: 760px) {
+    .footer {
+      background-color: #000000;
+      padding: 15px 0;
+      text-align: center;
+      color: white;
+      font-family: 'Brondi Condensed', sans-serif;
+      margin-top: 3px;
+      width: 100%; /* Asegura que ocupe todo el ancho */
+    }
+  
+    .footer__copyright {
+      font-size: 1.3rem;
+      margin: 0 0 5px 0;
+      color: white;
+    }
+  
+    .footer__credits {
+      font-size: 1.2rem;
+      margin: 0;
+      opacity: 0.8;
+      color: #E2A300;
+    }
+    .footer a {
+        text-decoration: none;
+        color: inherit; 
+    }
+  }
