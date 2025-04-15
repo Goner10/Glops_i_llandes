@@ -421,6 +421,11 @@ body{
         font-size: 1.1rem;
         padding: 4px 10px;
     }
+    .about__title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /* Media queries para pantallas pequeñas */
@@ -438,7 +443,23 @@ body{
         padding: 3px 8px;
     }
 }
+
+
+
+
 @media (min-width: 1024px) {
+    .about__title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about__text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 170px;
+    }
+ 
     .carousel__arrow {
       display: flex;
       width: 50px;
@@ -461,7 +482,7 @@ body{
     }
     
     .carousel {
-      max-width: 90%;
+      max-width: 50%;
       margin-left: auto;
       margin-right: auto;
       position: relative;
@@ -569,9 +590,21 @@ body{
     .foto2, .foto3 {
         height: 320px;
     }
+  
 }
 
 @media (min-width: 1024px) {
+    .about2__title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about2__text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 170px;
+    }
     .foto1 {
         height: 420px;
     }
@@ -624,8 +657,8 @@ body{
 }
 
 .logo__reservas img {
-    width: 155px;
-    height: 160px;
+    max-height: 150px;
+    width: auto;
 }
 
 
@@ -748,6 +781,10 @@ body{
     .mapa-interactivo,
     .mapa-interactivo iframe {
         min-height: 400px;
+    }
+    .logo__reservas img {
+        max-height: 300px;
+        width: auto;
     }
 }
 
