@@ -36,7 +36,7 @@ El sitio presenta un diseño atractivo que refleja la personalidad del local, co
 
 ### Página de inicio (versión desktop) 💻
 <div align="center">
-  <img src="screenshots/tablet.png" width="720" height="520" alt="Vista laptop">
+  <img src="screenshots/laptop.png" width="720" height="520" alt="Vista laptop">
 </div>
 
 ### Navegación con menú hamburguesa 🍔
