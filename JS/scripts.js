@@ -52,14 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }, false);
 
 
-    // Selector de idioma para reservas
+    // Selector de idioma unificado (para reservas y carta)
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', function() {
-            
+            // Funcionalidad común para todos los botones de idioma
             document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             
-            // Cambia entre idiomas
             const lang = this.dataset.lang;
             document.querySelectorAll('.lang-es, .lang-en').forEach(el => {
                 el.classList.add('hidden');
@@ -68,9 +67,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 el.classList.remove('hidden');
             });
 
-            // Cambia entre widgets
-            document.getElementById('widget-es').classList.toggle('hidden', lang !== 'es');
-            document.getElementById('widget-en').classList.toggle('hidden', lang !== 'en');
+            // Solo ejecutar esta parte si estamos en la página de reservas
+            if (document.getElementById('widget-es') && document.getElementById('widget-en')) {
+                document.getElementById('widget-es').classList.toggle('hidden', lang !== 'es');
+                document.getElementById('widget-en').classList.toggle('hidden', lang !== 'en');
+            }
         });
     });
 

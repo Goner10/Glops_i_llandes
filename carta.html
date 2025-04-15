@@ -42,8 +42,15 @@
 
     <section class="acordeon-carta">
 
-        <h2 class="titulo_carta">No mires la carta con hambre... porque te lo vas a pedir todo</h2>
+ <!-- Selector de idioma -->
+ <div class="language-toggle">
+  <button class="lang-btn active" data-lang="es">Español</button>
+  <button class="lang-btn" data-lang="en">English</button>
+</div>
 
+<!-- Títulos en ambos idiomas -->
+<h2 class="titulo_carta lang-es">No mires la carta con hambre... porque te lo vas a pedir todo</h2>
+<h2 class="titulo_carta lang-en hidden">Don't look at the menu hungry... because you'll order everything</h2>
         <button class="acordeon-titulo">
             GLOPS
             <img src="img/GLOPS_2.png" alt="Logo Glops" class="acordeon-logo">
@@ -52,7 +59,7 @@
          <div class="acordeon-contenido">
            <ul>
             <div class="menu-container">
-            <div class="menu-column">
+            <div class="menu-column lang-es">
                 <h3 class="section-title">GLOPS DE AUTOR(A)</h3>
 
                 <li class="section_coctel">
@@ -103,15 +110,65 @@
                   </li>
                   <p class="coctel-descripcion">Coco, maracuyá, sirope falernum, sweet & sour y soda.</p>
             </div>
+            <div class="menu-column lang-en hidden">
+              <h3 class="section-title">SIGNATURE COCKTAILS</h3>
+          
+              <li class="section_coctel">
+                  <span class="coctel-nombre">Milhomens</span>
+                  <span class="coctel-precio">€12.00</span>
+              </li>
+              <p class="coctel-descripcion">Bourbon infused with bacon, brown sugar, oak bitters.</p>
+          
+              <li class="section_coctel">
+                  <span class="coctel-nombre">Malandresa</span>
+                  <span class="coctel-precio">€11.00</span>
+              </li>
+              <p class="coctel-descripcion">Our Bloody Mary from El Cabanyal with Titiaina, a touch of mezcal, and secret sauce.</p>
+          
+              <li class="section_coctel">
+                  <span class="coctel-nombre">Romancer</span>
+                  <span class="coctel-precio">€11.00</span>
+              </li>
+              <p class="coctel-descripcion">Vodka infused with kaffir lime, green apple, ginger syrup, and peanut & sesame air.</p>
+          
+              <li class="section_coctel">
+                  <span class="coctel-nombre">Bufat</span>
+                  <span class="coctel-precio">€13.00</span>
+              </li>
+              <p class="coctel-descripcion">Young mezcal, pineapple juice, passion fruit, lime, and chipotle liqueur.</p>
+          
+              <li class="section_coctel">
+                  <span class="coctel-nombre">Figamolla</span>
+                  <span class="coctel-precio">€11.00</span>
+              </li>
+              <p class="coctel-descripcion">Gin, maraschino liqueur, black figs, Pedro Ximénez, Magic Velvet, and soda.</p>
+          
+              <li class="section_coctel">
+                  <span class="coctel-nombre">Apardalat</span>
+                  <span class="coctel-precio">€10.00</span>
+              </li>
+              <p class="coctel-descripcion">Tequila, apple liqueur, mango, ginger & chili syrup, and top of ginger beer.</p>
+          
+              <li class="section_coctel">
+                  <span class="coctel-nombre">Borinot</span>
+                  <span class="coctel-precio">€10.00</span>
+              </li>
+              <p class="coctel-descripcion">Local-style cocktail cream from "La Terreta".</p>
+          
+              <li class="section_coctel">
+                  <span class="coctel-nombre">Cap de Suro</span>
+                  <span class="coctel-precio">€9.00</span>
+              </li>
+              <p class="coctel-descripcion">Coconut, passion fruit, falernum syrup, and soda.</p>
+          </div>
             
-            
-            <div class="menu-column">
+            <div class="menu-column lang-es">
             <h3 class="section-title">GLOPS CLÁSICOS</h3>
             <li class="section_coctel">
                 <span class="coctel-nombre">Negroni</span>
                 <span class="coctel-precio">€9.00</span>
               </li>
-              <p class="coctel-descripcion">Ginebra, campari y vermouth "la copa".</p>
+              <p class="coctel-descripcion">Ginebra, campari y vermut "Cueva nueva".</p>
       
               <li class="section_coctel">
                 <span class="coctel-nombre">Paloma</span>
@@ -155,7 +212,57 @@
               </li>
               <p class="coctel-descripcion">Aperol, prosecco y soda.</p>
              </div>
-           </ul>
+          
+             <div class="menu-column lang-en hidden">
+              <h3 class="section-title">CLASSIC COCKTAILS</h3>
+                  <li class="section_coctel">
+                      <span class="coctel-nombre">Negroni</span>
+                      <span class="coctel-precio">€9.00</span>
+                  </li>
+                  <p class="coctel-descripcion">Gin, Campari, vermouth "Cueva nueva."</p>
+              
+                  <li class="section_coctel">
+                      <span class="coctel-nombre">Paloma</span>
+                      <span class="coctel-precio">€10.00</span>
+                  </li>
+                  <p class="coctel-descripcion">Tequila, lime, agave syrup, and grapefruit soda.</p>
+              
+                  <li class="section_coctel">
+                      <span class="coctel-nombre">Moscow Mule</span>
+                      <span class="coctel-precio">€9.00</span>
+                  </li>
+                  <p class="coctel-descripcion">Vodka, lime, ginger beer.</p>
+              
+                  <li class="section_coctel">
+                      <span class="coctel-nombre">Pisco Sour</span>
+                      <span class="coctel-precio">€8.00</span>
+                  </li>
+                  <p class="coctel-descripcion">Chilean pisco, "Tío Pepe" fino sherry, sweet & sour, Angostura, and Magic Velvet.</p>
+              
+                  <li class="section_coctel">
+                      <span class="coctel-nombre">Margarita</span>
+                      <span class="coctel-precio">€8.00</span>
+                  </li>
+                  <p class="coctel-descripcion">Tequila, triple sec, lime, and salt.</p>
+              
+                  <li class="section_coctel">
+                      <span class="coctel-nombre">Piña Colada</span>
+                      <span class="coctel-precio">€9.00</span>
+                  </li>
+                  <p class="coctel-descripcion">Aged and agricole rum, coconut, pineapple juice, and lime juice.</p>
+              
+                  <li class="section_coctel">
+                      <span class="coctel-nombre">Michelada</span>
+                      <span class="coctel-precio">€6.50</span>
+                  </li>
+                  <p class="coctel-descripcion">Lager beer, tomato juice, lime juice, and secret sauce.</p>
+              
+                  <li class="section_coctel">
+                      <span class="coctel-nombre">Aperol Spritz</span>
+                      <span class="coctel-precio">€6.00</span>
+                  </li>
+                  <p class="coctel-descripcion">Aperol, prosecco, and soda.</p>
+              </div>
 
 
            <!-- Después de las columnas de cócteles actuales, dentro del div.acordeon-contenido de la sección GLOPS -->
@@ -163,21 +270,25 @@
 <!-- Separador visual -->
 <div class="bebidas-divisor">
   <hr class="divisor-line">
-  <span class="divisor-text">BEBIDAS</span>
+  <span class="divisor-text lang-es">BEBIDAS</span>
+  <span class="divisor-text lang-en hidden">DRINKS</span>
   <hr class="divisor-line">
 </div>
 
 <!-- VINOS -->
 <div class="bebidas-header">
-  <h3 class="section-title">VINOS</h3>
-  <p class="destilados-info">Precios: Copa / Botella</p>
+  <h3 class="section-title lang-es">VINOS</h3>
+  <h3 class="section-title lang-en hidden">WINES</h3>
+  <p class="destilados-info lang-es">Precios: Copa / Botella</p>
+  <p class="destilados-info lang-en hidden">Prices: Glass / Bottle</p>
 </div>
 
 <div class="menu-container">
   <!-- Columna izquierda: Blancos y Rosados -->
   <div class="menu-column">
     <div class="bebidas-section">
-      <h4 class="section-title">BLANCOS</h4>
+      <h4 class="section-title lang-es">BLANCOS</h4>
+      <h4 class="section-title lang-en hidden">WHITE WINES</h4>
       <ul class="bebidas-items">
         <!-- MUSGO -->
         <li class="bebida-item bodega-item">
@@ -257,7 +368,8 @@
     </div>
     
     <div class="bebidas-section">
-      <h4 class="section-title">ROSADOS</h4>
+      <h4 class="section-title lang-es">ROSADOS</h4>
+      <h4 class="section-title lang-en hidden">ROSÉ</h4>
       <ul class="bebidas-items">
         <!-- PASIÓN DE BOBAL -->
         <li class="bebida-item bodega-item">
@@ -280,7 +392,8 @@
   <!-- Columna derecha: Tintos -->
   <div class="menu-column">
     <div class="bebidas-section">
-      <h4 class="section-title">TINTOS</h4>
+      <h4 class="section-title lang-es">TINTOS</h4>
+      <h4 class="section-title lang-en hidden">RED WINES</h4>
       <ul class="bebidas-items">
         <!-- MARILUNA -->
         <li class="bebida-item bodega-item">
@@ -384,54 +497,77 @@
 
 <!-- ESPUMOSOS -->
 <div class="bebidas-header">
-  <h3 class="section-title">ESPUMOSOS</h3>
+  <h3 class="section-title lang-es">ESPUMOSOS</h3>
+  <h3 class="section-title lang-en hidden">SPARKLING WINES</h3>
 </div>
 
 <div class="menu-container">
   <div class="menu-column">
     <ul class="bebidas-items">
-      <li class="bebida-item">
+      <li class="bebida-item bodega-item">
         <span class="bebida-nombre">CHAMPAGNE PIPER</span>
         <span class="bebida-precio">€48,00</span>
       </li>
-      <p class="bebida-descripcion">Pinot Noir 50% <br> Pinot Meunier 30% <br>Chardonay 20%</p>
+      <li class="bebida-item info-item">
+        <span class="bebida-info">Pinot Noir 50%</span>
+      </li>
+      <li class="bebida-item info-item">
+        <span class="bebida-info">Pinot Meunier 30%</span>
+      </li>
+      <li class="bebida-item info-item">
+        <span class="bebida-info">Chardonay 20%</span>
+      </li>
       
-      <li class="bebida-item">
+      <li class="bebida-item bodega-item">
         <span class="bebida-nombre">CAVA BRUT NATURE PASIÓN</span>
         <span class="bebida-precio">€24,60</span>
       </li>
-      <p class="bebida-descripcion">D.O. Utiel-Requena</p>
-      <p class="bebida-descripcion">Chardonay 90% Xarel.lo 10%</p>     
-      <p class="bebida-descripcion">Ecológico-Vegano</p>
+      <li class="bebida-item info-item">
+        <span class="bebida-info">D.O. Utiel-Requena</span>
+      </li>
+      <li class="bebida-item info-item">
+        <span class="bebida-info">Chardonay 90% Xarel.lo 10%</span>
+      </li>
+      <li class="bebida-item info-item">
+        <span class="bebida-info lang-es">Ecológico-Vegano</span>
+        <span class="bebida-info lang-en hidden">Organic-Vegan</span>
+      </li>
     </ul>
   </div>
   
   <div class="menu-column">
     <ul class="bebidas-items">
-      <li class="bebida-item">
+      <li class="bebida-item bodega-item">
         <span class="bebida-nombre">CAVA BRUT NATURE ROSADO PASIÓN</span>
         <span class="bebida-precio">€21,50</span>
       </li>
-      <p class="bebida-descripcion">D.O. Utiel-Requena</p>
-      <p class="bebida-descripcion">Pinot Noir 85% Garnacha 15%</p>
-      
-      <p class="bebida-descripcion">Ecológico-Vegano</p>
-      
-      
+      <li class="bebida-item info-item">
+        <span class="bebida-info">D.O. Utiel-Requena</span>
+      </li>
+      <li class="bebida-item info-item">
+        <span class="bebida-info">Pinot Noir 85% Garnacha 15%</span>
+      </li>
+      <li class="bebida-item info-item">
+        <span class="bebida-info lang-es">Ecológico-Vegano</span>
+        <span class="bebida-info lang-en hidden">Organic-Vegan</span>
+      </li>
     </ul>
   </div>
 </div>
 <!-- DESTILADOS -->
 <div class="bebidas-header">
-  <h3 class="section-title">DESTILADOS</h3>
-  <p class="destilados-info">Precios: Combinado / Copa / Chupito</p>
+  <h3 class="section-title lang-es">DESTILADOS</h3>
+  <h3 class="section-title lang-en hidden">SPIRITS</h3>
+  <p class="destilados-info lang-es">Precios: Combinado / Copa / Chupito</p>
+  <p class="destilados-info lang-en hidden">Prices: Combined / Glass / Shot</p>
 </div>
 
 <div class="menu-container">
   <!-- Columna izquierda -->
   <div class="menu-column">
     <div class="bebidas-section">
-      <h4 class="bebidas-title">RON</h4>
+      <h4 class="bebidas-title lang-es">RON</h4>
+      <h4 class="bebidas-title lang-en hidden">RUM</h4>
       <ul class="bebidas-items">
         <li class="bebida-item">
           <span class="bebida-nombre">BRUGAL</span>
@@ -534,7 +670,8 @@
   <!-- Columna derecha -->
   <div class="menu-column">
     <div class="bebidas-section">
-      <h4 class="bebidas-title">GINEBRA</h4>
+      <h4 class="bebidas-title lang-es">GINEBRA</h4>
+      <h4 class="bebidas-title lang-en hidden">GIN</h4>
       <ul class="bebidas-items">
         <li class="bebida-item">
           <span class="bebida-nombre">BEEFEATER</span>
@@ -602,7 +739,8 @@
     </div>
     
     <div class="bebidas-section">
-      <h4 class="bebidas-title">WHISKY</h4>
+      <h4 class="bebidas-title lang-es">WHISKY</h4>
+      <h4 class="bebidas-title lang-en hidden">WHISKEY</h4>
       <ul class="bebidas-items">
         <li class="bebida-item">
           <span class="bebida-nombre">RED LABEL</span>
@@ -641,7 +779,8 @@
   <!-- Columna izquierda -->
   <div class="menu-column">
     <div class="bebidas-section">
-      <h4 class="section-title">CERVEZAS Y VERMUT</h4>
+      <h4 class="section-title lang-es">CERVEZAS Y VERMUT</h4>
+      <h4 class="section-title lang-en hidden">BEERS & VERMOUTH</h4>
       <ul class="bebidas-items">
         <li class="bebida-item">
           <span class="bebida-nombre">CAÑA ESTRELLA GALICIA</span>
@@ -669,7 +808,8 @@
         </li>
         
         <li class="bebida-item">
-          <span class="bebida-nombre">0.0 TOSTADA ESTRELLA GALICIA</span>
+          <span class="bebida-nombre lang-es">0.0 TOSTADA ESTRELLA GALICIA</span>
+          <span class="bebida-nombre lang-en hidden">0.0 TOASTED BEER ESTRELLA GALICIA</span>
           <span class="bebida-precio">€3,00</span>
         </li>
         
@@ -684,12 +824,14 @@
         </li>
         
         <li class="bebida-item">
-          <span class="bebida-nombre">VERMUT CUEVA NUEVA</span>
+          <span class="bebida-nombre lang-es">VERMUT CUEVA NUEVA</span>
+          <span class="bebida-nombre lang-en hidden">VERMOUTH CUEVA NUEVA</span>
           <span class="bebida-precio">€4,50</span>
         </li>
         
         <li class="bebida-item">
-          <span class="bebida-nombre">VERMUT TEMPLAT</span>
+          <span class="bebida-nombre lang-es">VERMUT TEMPLAT</span>
+          <span class="bebida-nombre lang-en hidden">VERMOUTH TEMPLAT</span>
           <span class="bebida-precio">€4,50</span>
         </li>
         
@@ -699,12 +841,14 @@
         </li>
         
         <li class="bebida-item">
-          <span class="bebida-nombre">SANGRÍA VINO TINTO</span>
+          <span class="bebida-nombre lang-es">SANGRÍA VINO TINTO</span>
+          <span class="bebida-nombre lang-en hidden">RED WINE SANGRÍA</span>
           <span class="bebida-precio">€5,50</span>
         </li>
         
         <li class="bebida-item">
-          <span class="bebida-nombre">SANGRÍA VINO BLANCO</span>
+          <span class="bebida-nombre lang-es">SANGRÍA VINO BLANCO</span>
+          <span class="bebida-nombre lang-en hidden">WHITE WINE SANGRÍA</span>
           <span class="bebida-precio">€5,50</span>
         </li>
         
@@ -724,15 +868,18 @@
   <!-- Columna derecha -->
   <div class="menu-column">
     <div class="bebidas-section">
-      <h4 class="section-title">REFRESCOS</h4>
+      <h4 class="section-title lang-es">REFRESCOS</h4>
+      <h4 class="section-title lang-en hidden">SODAS</h4>
       <ul class="bebidas-items">
         <li class="bebida-item">
-          <span class="bebida-nombre">AGUA</span>
+          <span class="bebida-nombre lang-es">AGUA</span>
+          <span class="bebida-nombre lang-en hidden">WATER</span>
           <span class="bebida-precio">€2,50</span>
         </li>
         
         <li class="bebida-item">
-          <span class="bebida-nombre">AGUA GAS</span>
+          <span class="bebida-nombre lang-es">AGUA CON GAS</span>
+          <span class="bebida-nombre lang-en hidden">CARBONATED WATER</span>
           <span class="bebida-precio">€2,50</span>
         </li>
         
@@ -772,32 +919,38 @@
         </li>
         
         <li class="bebida-item">
-          <span class="bebida-nombre">TÓNICA</span>
+          <span class="bebida-nombre lang-es">TÓNICA</span>
+          <span class="bebida-nombre lang-en hidden">TONIC</span>
           <span class="bebida-precio">€2,50</span>
         </li>
         
         <li class="bebida-item">
-          <span class="bebida-nombre">LIMONADA NATURAL</span>
+          <span class="bebida-nombre lang-es">LIMONADA NATURAL</span>
+          <span class="bebida-nombre lang-en hidden">NATURAL LIMONADE</span>
           <span class="bebida-precio">€3,00</span>
         </li>
       </ul>
     </div>
     
     <div class="bebidas-section">
-      <h4 class="section-title">CAFÉS</h4>
+      <h4 class="section-title lang-es">CAFÉS</h4>
+      <h4 class="section-title lang-en hidden">COFFEES</h4>
       <ul class="bebidas-items">
         <li class="bebida-item">
-          <span class="bebida-nombre">CAFÉ SOLO</span>
+          <span class="bebida-nombre lang-es">CAFÉ SOLO</span>
+          <span class="bebida-nombre lang-en hidden">BLACK COFFEE</span>
           <span class="bebida-precio">€1,40</span>
         </li>
         
         <li class="bebida-item">
-          <span class="bebida-nombre">CORTADO</span>
+          <span class="bebida-nombre lang-es">CORTADO</span>
+          <span class="bebida-nombre lang-en hidden">ESPRESSO MACHIATO</span>
           <span class="bebida-precio">€1,60</span>
         </li>
         
         <li class="bebida-item">
-          <span class="bebida-nombre">CAFÉ CON LECHE</span>
+          <span class="bebida-nombre lang-es">CAFÉ CON LECHE</span>
+          <span class="bebida-nombre lang-en hidden">COFFE WITH MILK</span>
           <span class="bebida-precio">€2,00</span>
         </li>
         
@@ -812,7 +965,8 @@
         </li>
         
         <li class="bebida-item">
-          <span class="bebida-nombre">INFUSIÓN</span>
+          <span class="bebida-nombre lang-es">INFUSIÓN</span>
+          <span class="bebida-nombre lang-en hidden">INFUSION</span>
           <span class="bebida-precio">€2,00</span>
         </li>
       </ul>
@@ -821,6 +975,9 @@
 </div>
         </div>
          </div>
+
+
+
 
          <button class="acordeon-titulo">
           <img src="img/LLANDES_2.png" alt="Logo Llandes" class="acordeon-logo">
@@ -831,331 +988,425 @@
 
            <!-- Columna izquierda -->
            <div class="menu-column">
-             
-             <div class="menu-section">
-               <h3 class="section-title">VITRINA</h3>
-               <ul class="menu-items">
-                 <li>
-                   <div class="dish-name">Gilda Anchoa <span class="allergens">(4)</span></div>
-                   <span class="price">€2.50</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Gilda Boquerón <span class="allergens">(4)</span></div>
-                   <span class="price">€2.50</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Gilda Cecina y Queso <span class="allergens">(2)</span></div>
-                   <span class="price">€2.80</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Sardina Ahumada <span class="allergens">(4)</span></div>
-                   <span class="price">€3.50</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Boquerones en vinagre <span class="allergens">(4)</span></div>
-                   <span class="price">€7.00</span>
-                 </li>
-               </ul>
-             </div>
-             
-             
-             <div class="menu-section">
-               <h3 class="section-title">EMBUTIDOS, QUESOS Y PATÉS</h3>
-               <ul class="menu-items">
-                 <li>
-                   <div class="dish-name">Chicharrón de Cádiz</div>
-                   <span class="price">€9.80</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Pastrami Ahumado</div>
-                   <span class="price">€10.80</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Jamón 5 Jotas</div>
-                   <span class="price">€26.00</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Cecina Reserva 80g</div>
-                   <span class="price">€22.00</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Tabla de Quesos <span class="allergens">(2)</span></div>
-                   <span class="price">€17.50</span>
-                 </li>
-                 <p class="dish-descripcion">BRIE, AÑEJO RESERVA, CABRALES Y AL ROMERO.</p>
-                 
-                 <li>
-                   <div class="dish-name">Media Tabla de Quesos <span class="allergens">(2)</span></div>
-                   <span class="price">€12.50</span>
-                 </li>
-                 <p class="dish-descripcion">BRIE, AÑEJO RESERVA, CABRALES Y AL ROMERO.</p>
-                 
-                 <li>
-                   <div class="dish-name">Paté de Pimiento Piquillo</div>
-                   <span class="price">€7.00</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Paté de Atún a la Mostaza y Miel <span class="allergens">(4,10)</span></div>
-                   <span class="price">€7.50</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Paté de Cabracho <span class="allergens">(4)</span></div>
-                   <span class="price">€8.00</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Paté de Perdiz</div>
-                   <span class="price">€7.50</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Paté de Bacalao con Manzana <span class="allergens">(4)</span></div>
-                   <span class="price">€8.00</span>
-                 </li>
-               </ul>
-             </div>
-             
-             <!-- Sección PICAETA -->
-             <div class="menu-section">
-               <h3 class="section-title">PICAETA</h3>
-               <ul class="menu-items">
-                 <li>
-                   <div class="dish-name">Mejillón en Escabeche con Papas <span class="allergens">(1, 3)</span></div>
-                   <span class="price">€7.00</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Carpaccio de ventresca de atún rojo <span class="allergens">(4)</span></div>
-                   <span class="price">€20.50</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Hummus del Día <span class="allergens">(9)</span></div>
-                   <span class="price">€7.00</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Ajoarriero <span class="allergens">(4,7)</span></div>
-                   <span class="price">€8.00</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Titaina <span class="allergens">(4, 5)</span></div>
-                   <span class="price">€9.00</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Ensaladilla de Marisco <span class="allergens">(1, 4, 7 ,8)</span></div>
-                   <span class="price">€9.50</span>
-                 </li>
-                 <p class="dish-descripcion">CON VENTRESCA Y ENCURTIDOS</p>
-                 
-                 <li>
-                   <div class="dish-name">Coca de Pastrami <span class="allergens">(1, 2, 6, 7, 10)</span></div>
-                   <span class="price">€5.50</span>
-                 </li>
-                 <p class="dish-descripcion">CON SALSA DE MOSTAZA, PEPINILLO Y LÁMINAS DE PARMESANO.</p>
-                 
-                 <li>
-                   <div class="dish-name">Coca de Titaina con Sardina <span class="allergens">(1, 4, 5,)</span></div>
-                   <span class="price">€6.00</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Coca de Escalivada con Romescu <span class="allergens">(1,5)</span></div>
-                   <span class="price">€5.50</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Alcachofas <span class="allergens">(1,5)</span></div> 
-                   <span class="price">€9.00</span>
-                 </li>
-                 <p class="dish-descripcion">CON MAYONESA ESPINALER Y SALMÓN AHUMADO.</p>
-                 
-                 <li>
-                   <div class="dish-name">Foie Demar <span class="allergens">(4, 5, 6, 9, 10)</span></div>
-                   <span class="price">€9.00</span>
-                 </li>
-                 <p class="dish-descripcion">CON CREMA DE PISTACHO Y PERLAS DE PX.</p>
-                 
-                 <li>
-                   <div class="dish-name">Puerro Confitado <span class="allergens">(7)</span></div>
-                   <span class="price">€10.00</span>
-                 </li>
-                 <p class="dish-descripcion">CON MAYONESA DE AJO NEGRO GRATINADO.</p>
-                 
-                 <li>
-                   <div class="dish-name">Albóndigas al Vermut Templat <span class="allergens">(1)</span></div>
-                   <span class="price">€12.00</span>
-                 </li>
-               </ul>
-             </div>
-           </div>
+            <div class="menu-section">
+              <h3 class="section-title lang-es">VITRINA</h3>
+              <h3 class="section-title lang-en hidden">APPETISERS</h3>
+              <ul class="menu-items">
+                <li>
+                  <div class="dish-name lang-es">Gilda Anchoa <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">Anchovy Gilda <span class="allergens">(4)</span></div>
+                  <span class="price">€2.50</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Gilda Boquerón <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">White Anchovy Gilda <span class="allergens">(4)</span></div>
+                  <span class="price">€2.50</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Gilda Cecina y Queso <span class="allergens">(2)</span></div>
+                  <div class="dish-name lang-en hidden">Cured Beef & Cheese Gilda <span class="allergens">(2)</span></div>
+                  <span class="price">€2.80</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Sardina Ahumada <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">Smoked Sardine <span class="allergens">(4)</span></div>
+                  <span class="price">€3.50</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Boquerones en vinagre <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">Anchovies in Vinegar <span class="allergens">(4)</span></div>
+                  <span class="price">€7.00</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="menu-section">
+              <h3 class="section-title lang-es">EMBUTIDOS, QUESOS Y PATÉS</h3>
+              <h3 class="section-title lang-en hidden">COLD CUTS, CHEESE & PÂTÉS</h3>
+              <ul class="menu-items">
+                <li>
+                  <div class="dish-name lang-es">Chicharrón de Cádiz</div>
+                  <div class="dish-name lang-en hidden">Cádiz-Style Pork Crackling</div>
+                  <span class="price">€9.80</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Pastrami Ahumado</div>
+                  <div class="dish-name lang-en hidden">Smoked Pastrami</div>
+                  <span class="price">€10.80</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Jamón 5 Jotas</div>
+                  <div class="dish-name lang-en hidden">5 Jotas Ham</div>
+                  <span class="price">€26.00</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Cecina Reserva 80g</div>
+                  <div class="dish-name lang-en hidden">Aged Cured Beef 80g</div>
+                  <span class="price">€22.00</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Tabla de Quesos <span class="allergens">(2)</span></div>
+                  <div class="dish-name lang-en hidden">Cheese Platter <span class="allergens">(2)</span></div>
+                  <span class="price">€17.50</span>
+                </li>
+                <p class="dish-descripcion lang-es">BRIE, AÑEJO RESERVA, CABRALES Y AL ROMERO.</p>
+                <p class="dish-descripcion lang-en hidden">BRIE, AGED CHEESE, BLUE CHEESE, ROSEMARY CHEESE.</p>
+                
+                <li>
+                  <div class="dish-name lang-es">Media Tabla de Quesos <span class="allergens">(2)</span></div>
+                  <div class="dish-name lang-en hidden">Half Cheese Platter <span class="allergens">(2)</span></div>
+                  <span class="price">€12.50</span>
+                </li>
+                <p class="dish-descripcion lang-es">BRIE, AÑEJO RESERVA, CABRALES Y AL ROMERO.</p>
+                <p class="dish-descripcion lang-en hidden">BRIE, AGED CHEESE, BLUE CHEESE, ROSEMARY CHEESE.</p>
+                
+                <li>
+                  <div class="dish-name lang-es">Paté de Pimiento Piquillo</div>
+                  <div class="dish-name lang-en hidden">Pepper Pâté</div>
+                  <span class="price">€7.00</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Paté de Atún a la Mostaza y Miel <span class="allergens">(4,10)</span></div>
+                  <div class="dish-name lang-en hidden">Tuna Pâté with Mustard & Honey <span class="allergens">(4,10)</span></div>
+                  <span class="price">€7.50</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Paté de Cabracho <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">Scorpion Fish Pâté <span class="allergens">(4)</span></div>
+                  <span class="price">€8.00</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Paté de Perdiz</div>
+                  <div class="dish-name lang-en hidden">Partridge Pâté</div>
+                  <span class="price">€7.50</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Paté de Bacalao con Manzana <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">Cod Pâté with Apple <span class="allergens">(4)</span></div>
+                  <span class="price">€8.00</span>
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Sección PICAETA -->
+            <div class="menu-section">
+              <h3 class="section-title lang-es">PICAETA</h3>
+              <h3 class="section-title lang-en hidden">SNACKS</h3>
+              <ul class="menu-items">
+                <li>
+                  <div class="dish-name lang-es">Mejillón en Escabeche con Papas <span class="allergens">(1, 3)</span></div>
+                  <div class="dish-name lang-en hidden">Pickled Mussels with Potatoes <span class="allergens">(1, 3)</span></div>
+                  <span class="price">€7.00</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Carpaccio de ventresca de atún rojo <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">Bluefin Tuna Belly Carpaccio <span class="allergens">(4)</span></div>
+                  <span class="price">€20.50</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Hummus del Día <span class="allergens">(9)</span></div>
+                  <div class="dish-name lang-en hidden">Hummus of the Day <span class="allergens">(9)</span></div>
+                  <span class="price">€7.00</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Ajoarriero <span class="allergens">(4,7)</span></div>
+                  <div class="dish-name lang-en hidden">Ajoarriero (Cod and Garlic Spread) <span class="allergens">(4,7)</span></div>
+                  <span class="price">€8.00</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Titaina <span class="allergens">(4, 5)</span></div>
+                  <div class="dish-name lang-en hidden">Titaina (Traditional Tuna Dish) <span class="allergens">(4, 5)</span></div>
+                  <span class="price">€9.00</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Ensaladilla de Marisco <span class="allergens">(1, 4, 7 ,8)</span></div>
+                  <div class="dish-name lang-en hidden">Seafood Salad <span class="allergens">(1, 4, 7 ,8)</span></div>
+                  <span class="price">€9.50</span>
+                </li>
+                <p class="dish-descripcion lang-es">CON VENTRESCA Y ENCURTIDOS</p>
+                <p class="dish-descripcion lang-en hidden">WITH TUNA BELLY AND PICKLES</p>
+                
+                <li>
+                  <div class="dish-name lang-es">Coca de Pastrami <span class="allergens">(1, 2, 6, 7, 10)</span></div>
+                  <div class="dish-name lang-en hidden">Pastrami Flatbread <span class="allergens">(1, 2, 6, 7, 10)</span></div>
+                  <span class="price">€5.50</span>
+                </li>
+                <p class="dish-descripcion lang-es">CON SALSA DE MOSTAZA, PEPINILLO Y LÁMINAS DE PARMESANO.</p>
+                <p class="dish-descripcion lang-en hidden">WITH MUSTARD SAUCE, PICKLES, AND PARMESAN SLICES.</p>
+                
+                <li>
+                  <div class="dish-name lang-es">Coca de Titaina con Sardina <span class="allergens">(1, 4, 5,)</span></div>
+                  <div class="dish-name lang-en hidden">Titaina Flatbread with Sardine <span class="allergens">(1, 4, 5,)</span></div>
+                  <span class="price">€6.00</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Coca de Escalivada con Romescu <span class="allergens">(1,5)</span></div>
+                  <div class="dish-name lang-en hidden">Roasted Vegetable Flatbread with Romesco <span class="allergens">(1,5)</span></div>
+                  <span class="price">€5.50</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Alcachofas <span class="allergens">(1,5)</span></div>
+                  <div class="dish-name lang-en hidden">Artichokes <span class="allergens">(1,5)</span></div>
+                  <span class="price">€9.00</span>
+                </li>
+                <p class="dish-descripcion lang-es">CON MAYONESA ESPINALER Y SALMÓN AHUMADO.</p>
+                <p class="dish-descripcion lang-en hidden">WITH "ESPINALER" MAYO AND SMOKED SALMON.</p>
+                
+                <li>
+                  <div class="dish-name lang-es">Foie Demar <span class="allergens">(4, 5, 6, 9, 10)</span></div>
+                  <div class="dish-name lang-en hidden">Sea Foie <span class="allergens">(4, 5, 6, 9, 10)</span></div>
+                  <span class="price">€9.00</span>
+                </li>
+                <p class="dish-descripcion lang-es">CON CREMA DE PISTACHO Y PERLAS DE PX.</p>
+                <p class="dish-descripcion lang-en hidden">WITH PISTACHIO CREAM AND PEDRO XIMÉNEZ PEARLS.</p>
+                
+                <li>
+                  <div class="dish-name lang-es">Puerro Confitado <span class="allergens">(7)</span></div>
+                  <div class="dish-name lang-en hidden">Confit Leek <span class="allergens">(7)</span></div>
+                  <span class="price">€10.00</span>
+                </li>
+                <p class="dish-descripcion lang-es">CON MAYONESA DE AJO NEGRO GRATINADO.</p>
+                <p class="dish-descripcion lang-en hidden">WITH BLACK GARLIC MAYO AU GRATIN.</p>
+                
+                <li>
+                  <div class="dish-name lang-es">Albóndigas al Vermut Templat <span class="allergens">(1)</span></div>
+                  <div class="dish-name lang-en hidden">Meatballs with Vermouth Sauce <span class="allergens">(1)</span></div>
+                  <span class="price">€12.00</span>
+                </li>
+              </ul>
+            </div>
+          
+            <div class="menu-section">
+              <h3 class="section-title lang-es">EXTRAS</h3>
+              <h3 class="section-title lang-en hidden">EXTRAS</h3>
+              <ul class="menu-items">
+                <li>
+                  <div class="dish-name lang-es">Patatas</div>
+                  <div class="dish-name lang-en hidden">Potatoes</div>
+                  <span class="price">€2.00</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Pan de Masa Madre</div>
+                  <div class="dish-name lang-en hidden">Sourdough Bread</div>
+                  <span class="price">€2.50</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Picos</div>
+                  <div class="dish-name lang-en hidden">Breadsticks</div>
+                  <span class="price">€1.00</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Pan Sin Gluten</div>
+                  <div class="dish-name lang-en hidden">Gluten-Free Bread</div>
+                  <span class="price">€1.50</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Columna derecha -->
+          <div class="menu-column">
+            <div class="menu-section">
+              <h3 class="section-title lang-es">LLANDES</h3>
+              <h3 class="section-title lang-en hidden">TINNED PRODUCTS</h3>
+              <ul class="menu-items">
+                <h2 class="nombre__llandes">La brújula</h2>
+                
+                <li>
+                  <div class="dish-name lang-es">Chipirones en su Tinta <span class="allergens">(3, 4, 8)</span></div>
+                  <div class="dish-name lang-en hidden">Baby Squid in Ink <span class="allergens">(3, 4, 8)</span></div>
+                  <span class="price">€9.70</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Sardinillas Guisadas <span class="allergens">(1, 4)</span></div>
+                  <div class="dish-name lang-en hidden">Stewed Sardines <span class="allergens">(1, 4)</span></div>
+                  <span class="price">€9.10</span>
+                </li>
+          
+                <h2 class="nombre__llandes">La curiosa</h2>
+                
+                <li>
+                  <div class="dish-name lang-es">Caballa Canalla <span class="allergens">(3,8)</span></div>
+                  <div class="dish-name lang-en hidden">"Rebel" Mackerel <span class="allergens">(3,8)</span></div>
+                  <span class="price">€9.40</span>
+                </li>
+                <p class="dish-descripcion lang-es">DE CURRY Y GUINDILLA.</p>
+                <p class="dish-descripcion lang-en hidden">WITH CURRY AND CHILI.</p>
+                
+                <li>
+                  <div class="dish-name lang-es">Sardinillas al Limón <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">Lemon Sardines <span class="allergens">(4)</span></div>
+                  <span class="price">€9.70</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Mejillón en Escabeche Picante <span class="allergens">(4, 8, 10)</span></div>
+                  <div class="dish-name lang-en hidden">Spicy Pickled Mussels <span class="allergens">(4, 8, 10)</span></div>
+                  <span class="price">€12.00</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Ventresca de Atún al Curry <span class="allergens">(3, 4, 5, 8)</span></div>
+                  <div class="dish-name lang-en hidden">Tuna Belly with Curry <span class="allergens">(3, 4, 5, 8)</span></div>
+                  <span class="price">€9.50</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Caballa a la Provenzal <span class="allergens">(3, 8)</span></div>
+                  <div class="dish-name lang-en hidden">Mackerel with Provincial Herbs <span class="allergens">(3, 8)</span></div>
+                  <span class="price">€8.90</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Jurel en AO, Ajo y Perejil <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">Horse Mackerel in Olive Oil, Garlic and Parsley <span class="allergens">(4)</span></div>
+                  <span class="price">€7.80</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Ventresca de Atún al Pesto <span class="allergens">(2, 3, 4, 5, 8)</span></div>
+                  <div class="dish-name lang-en hidden">Tuna Belly with Pesto <span class="allergens">(2, 3, 4, 5, 8)</span></div>
+                  <span class="price">€9.70</span>
+                </li>
+                
+                <h2 class="nombre__llandes">Real Conservera Española</h2>
+                
+                <li>
+                  <div class="dish-name lang-es">Sardinas en AO <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">Sardines in Olive Oil <span class="allergens">(4)</span></div>
+                  <span class="price">€8.00</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Huevas de Merluza Picantes <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">Spicy Hake Roe <span class="allergens">(4)</span></div>
+                  <span class="price">€12.00</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Agujas AOVE <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">Garfish in Extra Virgin Olive Oil <span class="allergens">(4)</span></div>
+                  <span class="price">€8.90</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Zamburiñas Guisadas <span class="allergens">(3, 10)</span></div>
+                  <div class="dish-name lang-en hidden">Stewed Scallops <span class="allergens">(3, 10)</span></div>
+                  <span class="price">€15.60</span>
+                </li>
+                <p class="dish-descripcion lang-es">SELECCIÓN 1920</p>
+                <p class="dish-descripcion lang-en hidden">1920 SELECTION</p>
+          
+                <h2 class="nombre__llandes">A Conserveria</h2>
+                
+                <li>
+                  <div class="dish-name lang-es">Lomos de Merluza Pincho <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">Skewered Hake Fillets <span class="allergens">(4)</span></div>
+                  <span class="price">€12.00</span>
+                </li>
+                
+                <h2 class="nombre__llandes">Nall Delicatessen</h2>
+                
+                <li>
+                  <div class="dish-name lang-es">Anchoa 000 100% AOVE <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">Anchovies 000 100% Extra Virgin Olive Oil <span class="allergens">(4)</span></div>
+                  <span class="price">€15.00</span>
+                </li>
+                <p class="dish-descripcion lang-es">(6U).</p>
+                <p class="dish-descripcion lang-en hidden">(6 UNITS).</p>
+                
+                <li>
+                  <div class="dish-name lang-es">Ijada de Atún Ahumada <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">Smoked Tuna Belly <span class="allergens">(4)</span></div>
+                  <span class="price">€12.80</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Anchoa 0,0 <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">Truffle Anchovies 0,0 <span class="allergens">(4)</span></div>
+                  <span class="price">€18.40</span>
+                </li>
+                <p class="dish-descripcion lang-es">TRUFA (10U).</p>
+                <p class="dish-descripcion lang-en hidden">(10 UNITS).</p>
+                
+                <li>
+                  <div class="dish-name lang-es">Anchoas 0,0 <span class="allergens">(4)</span></div>
+                  <div class="dish-name lang-en hidden">Smoked Butter Anchovies 0,0 <span class="allergens">(4)</span></div>
+                  <span class="price">€18.40</span>
+                </li>
+                <p class="dish-descripcion lang-es">MANTEQUILLA AHUMADA (10U).</p>
+                <p class="dish-descripcion lang-en hidden">(10 UNITS).</p>
+              </ul>
+            </div>
+            
+            <!-- Sección POSTRES -->
+            <div class="menu-section">
+              <h3 class="section-title lang-es">POSTRES</h3>
+              <h3 class="section-title lang-en hidden">DESSERTS</h3>
+              <ul class="menu-items">
+                <li>
+                  <div class="dish-name lang-es">Torrija <span class="allergens">(1,2,7)</span></div>
+                  <div class="dish-name lang-en hidden">French Toast (Torrija) <span class="allergens">(1,2,7)</span></div>
+                  <span class="price">€5.50</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Tarta de queso <span class="allergens">(2,7)</span></div>
+                  <div class="dish-name lang-en hidden">Cheesecake <span class="allergens">(2,7)</span></div>
+                  <span class="price">€5.50</span>
+                </li>
+                
+                <li>
+                  <div class="dish-name lang-es">Trufa con AOVE y Sal de Escamas <span class="allergens">(2)</span></div>
+                  <div class="dish-name lang-en hidden">Truffle with Extra Virgin Olive Oil & Flake Salt <span class="allergens">(2)</span></div>
+                  <span class="price">€1.50</span>
+                </li>
+              </ul>
+            </div>
+            <div class="allergens-legend">
+              <h4 class="lang-es">ALÉRGENOS</h4>
+              <h4 class="lang-en hidden">ALLERGENS</h4>
+              <ul>
+                <li><span class="allergen-number">1.</span> <span class="lang-es">Gluten</span><span class="lang-en hidden">Gluten</span></li>
+                <li><span class="allergen-number">2.</span> <span class="lang-es">Lácteos</span><span class="lang-en hidden">Dairy</span></li>
+                <li><span class="allergen-number">3.</span> <span class="lang-es">Moluscos</span><span class="lang-en hidden">Molluscs</span></li>
+                <li><span class="allergen-number">4.</span> <span class="lang-es">Pescado</span><span class="lang-en hidden">Fish</span></li>
+                <li><span class="allergen-number">5.</span> <span class="lang-es">Frutos secos</span><span class="lang-en hidden">Nuts</span></li>
+                <li><span class="allergen-number">6.</span> <span class="lang-es">Soja</span><span class="lang-en hidden">Soy</span></li>
+                <li><span class="allergen-number">7.</span> <span class="lang-es">Huevo</span><span class="lang-en hidden">Egg</span></li>
+                <li><span class="allergen-number">8.</span> <span class="lang-es">Crustáceos</span><span class="lang-en hidden">Crustaceans</span></li>
+                <li><span class="allergen-number">9.</span> <span class="lang-es">Sésamo</span><span class="lang-en hidden">Sesame</span></li>
+                <li><span class="allergen-number">10.</span> <span class="lang-es">Sulfitos</span><span class="lang-en hidden">Sulphites</span></li>
+              </ul>
+            </div>
+            
+          </div>
            
-           <!-- Columna derecha -->
-           <div class="menu-column">
-             <div class="menu-section">
-               <h3 class="section-title">LLANDES</h3>
-               <ul class="menu-items">
-                  <h2 class="nombre__llandes">La brújula</h2>
-                  
-                  <li>
-                    <div class="dish-name">Chipirones en su Tinta <span class="allergens">(3, 4, 8)</span></div>
-                    <span class="price">€9.70</span>
-                  </li>
-                  
-                  <li>
-                    <div class="dish-name">Sardinillas Guisadas <span class="allergens">(1, 4)</span></div>
-                    <span class="price">€9.10</span>
-                  </li>
-
-                 <h2 class="nombre__llandes">La curiosa</h2>
-                 
-                 <li>
-                   <div class="dish-name">Caballa Canalla <span class="allergens">(3,8)</span></div>
-                   <span class="price">€9.40</span>
-                 </li>
-                 <p class="dish-descripcion">DE CURRY Y GUINDILLA.</p>
-                 
-                 <li>
-                   <div class="dish-name">Sardinillas al Limón <span class="allergens">(4)</span></div>
-                   <span class="price">€9.70</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Mejillón en Escabeche Picante <span class="allergens">(4, 8, 10)</span></div>
-                   <span class="price">€12.00</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Ventresca de Atún al Curry <span class="allergens">(3, 4, 5, 8)</span></div>
-                   <span class="price">€9.50</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Caballa a la Provenzal <span class="allergens">(3, 8)</span></div>
-                   <span class="price">€8.90</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Jurel en AO, Ajo y Perejil <span class="allergens">(4)</span></div>
-                   <span class="price">€7.80</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Ventresca de Atún al Pesto <span class="allergens">(2, 3, 4, 5, 8)</span></div>
-                   <span class="price">€9.70</span>
-                 </li>
-                 
-                 <h2 class="nombre__llandes">Real Conservera Española</h2>
-                 
-                 <li>
-                   <div class="dish-name">Sardinas en AO <span class="allergens">(4)</span></div>
-                   <span class="price">€8.00</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Huevas de Merluza Picantes <span class="allergens">(4)</span></div>
-                   <span class="price">€12.00</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Agujas AOVE <span class="allergens">(4)</span></div>
-                   <span class="price">€8.90</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Zamburiñas Guisadas <span class="allergens">(3, 10)</span></div>
-                   <span class="price">€15.60</span>
-                 </li>
-                 <p class="dish-descripcion">SELECCIÓN 1920</p>
-
-                 <h2 class="nombre__llandes">A Conserveria</h2>
-                 
-                 <li>
-                   <div class="dish-name">Lomos de Merluza Pincho <span class="allergens">(4)</span></div>
-                   <span class="price">€12.00</span>
-                 </li>
-                 
-                 <h2 class="nombre__llandes">Nall Delicatessen</h2>
-                 
-                 <li>
-                   <div class="dish-name">Anchoa 000 100% AOVE <span class="allergens">(4)</span></div>
-                   <span class="price">€15.00</span>
-                 </li>
-                 <p class="dish-descripcion">(6U).</p>
-                 
-                 <li>
-                   <div class="dish-name">Ijada de Atún Ahumada <span class="allergens">(4)</span></div>
-                   <span class="price">€12.80</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Anchoa 0,0 <span class="allergens">(4)</span></div>
-                   <span class="price">€18.40</span>
-                 </li>
-                 <p class="dish-descripcion">TRUFA (10U).</p>
-                 
-                 <li>
-                   <div class="dish-name">Anchoas 0,0 <span class="allergens">(4)</span></div>
-                   <span class="price">€18.40</span>
-                 </li>
-                 <p class="dish-descripcion">MANTEQUILLA AHUMADA (10U).</p>
-               </ul>
-             </div>
-             
-             <!-- Sección POSTRES -->
-             <div class="menu-section">
-               <h3 class="section-title">POSTRES</h3>
-               <ul class="menu-items">
-                 <li>
-                   <div class="dish-name">Torrija <span class="allergens">(1,2,7)</span></div>
-                   <span class="price">€5.50</span>
-                 </li>
-                 
-                 
-                 <li>
-                   <div class="dish-name">Tarta de queso <span class="allergens">(2,7)</span></div>
-                   <span class="price">€5.50</span>
-                 </li>
-                 
-                 <li>
-                   <div class="dish-name">Trufa con AOVE y Sal de Escamas <span class="allergens">(2)</span></div>
-                   <span class="price">€1.50</span>
-                 </li>
-               </ul>
-             </div>
-             
-             <!-- Leyenda de alérgenos -->
-             <div class="allergens-legend">
-               <h4>ALÉRGENOS</h4>
-               <ul>
-                 <li><span class="allergen-number">1.</span> Gluten</li>
-                 <li><span class="allergen-number">2.</span> Lácteos</li>
-                 <li><span class="allergen-number">3.</span> Moluscos</li>
-                 <li><span class="allergen-number">4.</span> Pescado</li>
-                 <li><span class="allergen-number">5.</span> Frutos secos</li>
-                 <li><span class="allergen-number">6.</span> Soja</li>
-                 <li><span class="allergen-number">7.</span> Huevo</li>
-                 <li><span class="allergen-number">8.</span> Crustáceos</li>
-                 <li><span class="allergen-number">9.</span> Sésamo</li>
-                 <li><span class="allergen-number">10.</span> Sulfitos</li>
-               </ul>
-             </div>
-           </div>
-         </div>
-       </div>
-      
+           
+           
       </section>
 
       <footer class="footer">

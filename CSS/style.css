@@ -890,6 +890,35 @@ body{
     margin-bottom: 80px;
 }
 
+
+.language-toggle {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.lang-btn {
+    background: #f0f0f0;
+    border: none;
+    padding: 8px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'Brondi Condensed', sans-serif;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+
+.lang-btn.active {
+    background: #E2A300;
+    color: black;
+}
+
+.hidden {
+    display: none !important;
+}
+
 .titulo_carta{
 display: flex;
 justify-content: center;
