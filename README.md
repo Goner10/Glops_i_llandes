@@ -31,26 +31,34 @@ El sitio presenta un diseño atractivo que refleja la personalidad del local, co
 
 ### Página de inicio (versión tablet) 📱
 <div align="center">
-  <img src="screenshots/tablet.png" width="600" height="500" alt="Vista tablet">
+  <img src="screenshots/tablet.png" width="620" height="490" alt="Vista tablet">
 </div>
 
 ### Página de inicio (versión desktop) 💻
-![Vista desktop](screenshots/desktop-home.jpg)
+<div align="center">
+  <img src="screenshots/tablet.png" width="720" height="520" alt="Vista laptop">
+</div>
 
 ### Navegación con menú hamburguesa 🍔
-![Menú móvil](screenshots/mobile-menu.jpg)
+<div align="center">
+  <img src="screenshots/menuHamburguesa.png" width="230" height="380" alt="Vista tablet">
+</div>
 
-### Carta de productos 🍴
-![Carta](screenshots/menu-view.jpg)
-
-### Sección de cócteles 🍸
-![Cócteles](screenshots/cocktails-section.jpg)
+### Carta de productos 🍴🍸
+<div align="center" style="display: flex; justify-content: center; gap: 10px;">
+  <img src="screenshots/carta1.png" width="230" height="380" alt="Vista móvil 1">
+  <img src="screenshots/carta2.png" width="230"  height="380" alt="Vista móvil 2">
+</div>
 
 ### Sistema de reservas 📅
-![Reservas](screenshots/reservations.jpg)
+<div align="center">
+  <img src="screenshots/reservasss.png" width="230" height="380" alt="Vista tablet">
+</div>
 
 ### Cambio de idioma 🌐
-![Idiomas](screenshots/language-switch.jpg)
+<div align="center">
+  <img src="screenshots/idiomas.png" width="230" height="380" alt="Vista tablet">
+</div>
 
 ## Tecnologías utilizadas 🛠️
 
