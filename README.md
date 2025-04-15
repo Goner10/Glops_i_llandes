@@ -22,10 +22,10 @@ El sitio presenta un diseño atractivo que refleja la personalidad del local, co
 ## Vistas del sitio web 🔍
 
 ### Página de inicio (versión móvil) 📱
-![Vista móvil](screenshots/mobile-home.jpg)
+![Vista móvil](screenshots/mobile-desktop.png)![Vista móvil](screenshots/mobile-desktop2.png)
 
 ### Página de inicio (versión tablet) 📱
-![Vista tablet](screenshots/tablet-home.jpg)
+![Vista tablet](screenshots/tablet.png)
 
 ### Página de inicio (versión desktop) 💻
 ![Vista desktop](screenshots/desktop-home.jpg)
