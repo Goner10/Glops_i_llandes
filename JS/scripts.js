@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navMenu.classList.toggle('hero__nav--active');
     }
     
-    // Función para cerrar el menú
+   
     function closeMenu() {
         if (navMenu.classList.contains('hero__nav--active')) {
             mobileMenu.classList.remove('hero__menu-toggle--active');
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             
-            // Obtener el idioma seleccionado
+            
             const lang = this.dataset.lang;
             console.log(`Cambiando a idioma: ${lang}`);
             
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 el.classList.remove('hidden');
             });
             
-            // Manejo específico para la página de reservas con los iframes
+           
             if (document.getElementById('widget-es') && document.getElementById('widget-en')) {
                 document.getElementById('widget-es').classList.add('hidden');
                 document.getElementById('widget-en').classList.add('hidden');
@@ -88,12 +88,12 @@ document.addEventListener('DOMContentLoaded', function() {
         el.classList.add('hidden');
     });
     
-    // Mostrar todo el contenido en español al cargar
+    
     document.querySelectorAll('.lang-es').forEach(el => {
         el.classList.remove('hidden');
     });
     
-    // Activar el botón de español por defecto
+    
     const esButton = document.querySelector('.lang-btn[data-lang="es"]');
     if (esButton) {
         esButton.classList.add('active');
@@ -105,14 +105,14 @@ document.addEventListener('DOMContentLoaded', function() {
         boton.addEventListener('click', () => {
             const contenido = boton.nextElementSibling;
 
-            // Cierra todos los paneles excepto el actual
+           
             document.querySelectorAll('.acordeon-contenido').forEach(panel => {
                 if (panel !== contenido) {
                     panel.classList.remove('activo');
                 }
             });
 
-            // Alterna el panel clicado
+            
             contenido.classList.toggle('activo');
         });
     });
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
         nextArrow.innerHTML = '&#10095;';
         nextArrow.setAttribute('aria-label', 'Siguiente');
         
-        // Crear contador numérico (en lugar de indicadores)
+        // Crear contador numérico 
         const counter = document.createElement('div');
         counter.classList.add('carousel__counter');
         counter.setAttribute('aria-live', 'polite');
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
         carouselParent.appendChild(nextArrow);
         carouselParent.appendChild(counter);
         
-        // Eliminar el contenedor de indicadores si existe
+     
         const oldIndicators = document.querySelector('.carousel__indicators');
         if (oldIndicators) {
             oldIndicators.innerHTML = ''; // Vaciamos el contenedor en lugar de eliminarlo para mantener la estructura
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
             resetAutoPlayTimer();
         });
         
-        // Evento para flecha siguiente
+        
         nextArrow.addEventListener('click', function() {
             goToSlide(currentIndex + 1);
             resetAutoPlayTimer();
@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 6000);
         }
         
-        // Función para detener el temporizador
+        
         function stopAutoPlay() {
             clearInterval(autoPlayInterval);
         }
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
             startAutoPlay();
         }
         
-        // Agregar funcionalidad de swipe para móviles
+        
         let touchStartX = 0;
         let touchEndX = 0;
         
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         function handleSwipe() {
-            const swipeThreshold = 50; // Umbral para considerar un swipe
+            const swipeThreshold = 50; 
             if (touchEndX < touchStartX - swipeThreshold) {
                 // Swipe izquierda (siguiente)
                 goToSlide(currentIndex + 1);
@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
             startAutoPlay();
         });
         
-        // También usar teclado para navegar
+        
         document.addEventListener('keydown', function(e) {
             if (isElementInViewport(carousel)) {
                 if (e.key === 'ArrowLeft') {
@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function() {
             );
         }
         
-        // Iniciar la reproducción automática
+        
         startAutoPlay();
     }
 
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Ejecutar al cargar y cuando cambie el tamaño de la ventana
+   
     if (document.querySelector('.covermanager-widget')) {
         adjustReservationIframe();
         window.addEventListener('resize', adjustReservationIframe);

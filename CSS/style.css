@@ -76,23 +76,23 @@ body{
     }
     
     .hero__title-img {
-      width: 40%; /* Reducir ligeramente el tamaño del logo */
-      margin-bottom: 25px; /* Menos margen inferior */
+      width: 40%; 
+      margin-bottom: 25px; 
     }
     
     .hero__btn {
-      margin-top: -5px; /* Ajuste fino para acercar el botón al logo */
+      margin-top: -5px; 
     }
   }
   
-  /* Ajuste más extremo para portátiles con pantalla muy baja */
+  
   @media (min-width: 1024px) and (max-height: 650px) {
     .hero {
-      padding-top: 15vh; /* Padding aún menor para pantallas muy bajas */
+      padding-top: 15vh; 
     }
     
     .hero__title-img {
-      width: 35%; /* Imagen más pequeña */
+      width: 35%; 
       margin-bottom: 20px;
     }
   }
@@ -104,7 +104,7 @@ body{
     right: 20px;
     cursor: pointer;
     z-index: 1000;
-    background: transparent; /* Cambiado a transparente */
+    background: transparent;
     border: none;
     padding: 10px;
     transition: all 0.3s ease;
@@ -114,7 +114,7 @@ body{
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-/* Añade estas nuevas clases para la animación */
+
 .hero__menu-toggle--active .hero__menu-toggle-bar:nth-child(1) {
     transform: rotate(45deg) translate(8px, 6px);
 }
@@ -202,21 +202,7 @@ body{
     width: 100%;
     height: auto;
 }
-/*
-.hero__title {
-    font-family: 'Brondi Condensed', sans-serif;
-    font-size: 3.8rem;
-    letter-spacing: 2.5px;
-    font-weight: 900;
-    color: black;
-    font-weight: 400;
-     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); 
-    position: relative;
-    display: block;
-    margin-bottom: 25px; 
-    margin-top: 0;
-}
-    */
+
 
 .hero__btn {
     font-family: 'Brondi Condensed', sans-serif;
@@ -241,12 +227,12 @@ body{
 
 @media (min-width: 768px) {
     .hero__nav {
-        width: 30%; /* Reducción del ancho en pantallas grandes */
-        right: -30%; /* Ajustado para coincidir con el nuevo ancho */
+        width: 30%; 
+        right: -30%; 
     }
     
     .hero__nav-link {
-        font-size: 2rem; /* Fuente ligeramente más pequeña en pantallas grandes */
+        font-size: 2rem; 
     }
     
     .hero__nav--active {
@@ -264,13 +250,13 @@ body{
 
 @media (min-width: 1024px) {
     .hero__nav {
-        width: 25%; /* Aún más estrecho en pantallas muy grandes */
-        right: -25%; /* Ajustado para coincidir */
+        width: 25%; 
+        right: -25%; 
     }
     
     .hero__menu-toggle {
-        top: 40px; /* Un poco más abajo en pantallas grandes */
-        right: 40px; /* Más alejado del borde */
+        top: 40px; 
+        right: 40px; 
     }
 }
 
@@ -390,7 +376,7 @@ body{
     position: absolute;
     color: #E2A300;
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 2.8rem !important;  /* Aumentado el tamaño de fuente */
+    font-size: 2.8rem !important;  
     z-index: 10;
     min-width: 105px; 
     text-align: center;
@@ -469,7 +455,7 @@ body{
     grid-area: foto3;
 }
 
-/* Estilo para todas las imágenes */
+
 .foto__img {
     width: 100%;
     height: 100%;
@@ -478,9 +464,9 @@ body{
     display: block;
 }
 
-/* ========= MEDIA QUERIES OPTIMIZADAS ========= */
 
-/* Dispositivos pequeños (móviles, hasta 480px) */
+
+
 @media (max-width: 480px) {
     .carousel__arrow {
         width: 30px;
@@ -504,7 +490,7 @@ body{
     }
 }
 
-/* Dispositivos medianos (tablets, hasta 768px) */
+
 @media (max-width: 768px) {
     .carousel__arrow {
         width: 35px;
@@ -528,7 +514,6 @@ body{
     }
 }
 
-/* Tablets y portátiles pequeños (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
     .about__title, .about2__title {
         text-align: center;
@@ -569,7 +554,7 @@ body{
     }
 }
 
-/* Portátiles y pantallas medianas (1024px - 1365px) */
+
 @media (min-width: 1024px) and (max-width: 1365px) {
     .about__title, .about2__title {
         display: flex;
@@ -637,7 +622,7 @@ body{
     }
 }
 
-/* Pantallas grandes (1366px y más) */
+
 @media (min-width: 1366px) {
     .about__title, .about2__title {
         display: flex;
@@ -939,7 +924,7 @@ body{
     width: 100%;
 }
 .covermanager-widget iframe {
-    min-height: 700px; /* Altura mínima para asegurar que el calendario se vea completo */
+    min-height: 700px; 
     width: 100%;
 }
 
@@ -982,7 +967,7 @@ body{
 
 @media (max-width: 768px) {
     .covermanager-widget iframe {
-        height: 750px !important; /* Aumentado un poco para asegurar que todo se vea */
+        height: 750px !important; 
     }
     
     .titulo__reserva {
@@ -993,7 +978,7 @@ body{
 
 @media (min-width: 768px) {
     .header_carta {
-        padding-top: 100px; /* Más espacio en pantallas grandes */
+        padding-top: 100px;
     }
     
     .titulo__reserva {
@@ -1001,7 +986,7 @@ body{
     }
     
     .covermanager-widget iframe {
-        min-height: 650px; /* Ajustado para pantallas grandes */
+        min-height: 650px; 
     }
 }
 
@@ -1038,7 +1023,7 @@ body{
 @media (max-width: 450px) {
     .language-toggle .lang-btn {
       color: black !important;
-      -webkit-text-fill-color: black; /* Para Safari en iOS */
+      -webkit-text-fill-color: black; 
       text-decoration: none;
     }
   }
@@ -1198,7 +1183,7 @@ margin-left: 23px;
     margin: 0 0 8px 0;
   }
 
-/* Divisor con línea y texto */
+
 .bebidas-divisor {
     display: flex;
     align-items: center;
@@ -1221,7 +1206,7 @@ margin-left: 23px;
     letter-spacing: 1px;
   }
   
-  /* Cabecera de cada sección de bebidas */
+
   .bebidas-header {
     width: 100%;
     text-align: center;
@@ -1245,7 +1230,7 @@ margin-left: 23px;
     text-align: center;
   }
   
-  /* Lista de bebidas */
+ 
   .bebidas-items {
     list-style: none;
     padding: 0;
@@ -1265,7 +1250,7 @@ margin-left: 23px;
     border-bottom: none;
   }
   
-  /* Nombre y descripción de bebidas */
+ 
   .bebida-nombre {
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.3rem;
@@ -1340,7 +1325,7 @@ margin-left: 23px;
     }
   }
 
-  /* Información de precios para destilados */
+  
 .destilados-info {
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.3rem;
@@ -1351,7 +1336,7 @@ margin-left: 23px;
     font-style: italic;
   }
   
-  /* Para destilados con múltiples precios */
+ 
   .bebida-precio-multiple {
     display: flex;
     gap: 6px;
@@ -1426,7 +1411,7 @@ margin-left: 23px;
     border-bottom: none;
 }
 
-/* Para todos los navegadores - se aplica con JavaScript */
+
 .menu-items li.no-border-bottom {
     border-bottom: none;
 }
@@ -1438,7 +1423,7 @@ margin-left: 23px;
     display: flex;
     align-items: center;
     flex: 1;
-    min-width: 0; /* Importante para que text-overflow funcione */
+    min-width: 0; 
 }
 
 .bebida-nombre,
@@ -1456,7 +1441,7 @@ margin-left: 23px;
     }
 }
 
-/* Estilo para las descripciones de platos */
+
 .dish-descripcion {
     font-family: 'Poppins';
     font-size: 0.6rem;
@@ -1476,7 +1461,7 @@ margin-left: 23px;
     border-bottom: none;
 }
 
-/* Leyenda de alérgenos */
+
 
 .allergens {
     font-size: 0.8rem;
@@ -1541,7 +1526,7 @@ margin-left: 23px;
 }
 
 @media (min-width: 768px) {
-    /* Estilos del acordeón */
+    
     .acordeon-contenido.activo {
         padding: 20px 15px;
     }
@@ -1565,7 +1550,7 @@ margin-left: 23px;
         left: 150px;
     }
     
-    /* Estilos del menú */
+   
     .menu-column {
         width: 48%;
     }
@@ -1584,12 +1569,12 @@ margin-left: 23px;
     }
     
     .menu-items li {
-        font-size: 1.6rem;  /* Mantener el tamaño más grande para mejor legibilidad */
+        font-size: 1.6rem;  
         padding: 8px 0;
     }
     
     .price {
-        font-size: 1.6rem;  /* Mantener el tamaño más grande para mejor legibilidad */
+        font-size: 1.6rem;  
     }
     
     .nombre__llandes {
@@ -1597,9 +1582,8 @@ margin-left: 23px;
     }
     
     .dish-descripcion {
-        font-size: 0.9rem; /* Tamaño para tablets */
-        padding-left: 0; /* Mantener alineado con título */
-    }
+        font-size: 0.9rem; 
+        padding-left: 0;
 
     .bebidas-title {
         font-size: 1.4rem;
@@ -1663,8 +1647,8 @@ margin-left: 23px;
     }
     
     .dish-descripcion {
-        font-size: 1rem; /* Tamaño para desktop */
-        padding-left: 0; /* Mantener alineado con título */
+        font-size: 1rem; 
+        padding-left: 0; 
     }
     .allergens-legend {
         width: 90%;
@@ -1689,7 +1673,7 @@ margin-left: 23px;
 }
 
 
-/* Para dispositivos móviles muy pequeños */
+
 @media (max-width: 375px) {
     .hero__title-img {
       width: 65%;
@@ -1769,5 +1753,6 @@ margin-left: 23px;
 }
 .footer a {
     text-decoration: none;
-    color: inherit; /* Esto mantendrá el color original del texto */
+    color: inherit; 
+}
 }
