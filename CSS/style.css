@@ -221,7 +221,7 @@ body{
 .hero__btn {
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.6rem;
-    letter-spacing: 1px;
+    letter-spacing: 2.3px;
     background: black;
     color: white;
     padding: 3px 50px;
@@ -288,7 +288,7 @@ body{
 }
 
 .about__content{
-    padding: 10px 25px 5px;
+    padding: 10px 20px 20px;
     
 }
 
@@ -296,27 +296,24 @@ body{
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 2.7rem;
     letter-spacing: 0.8px;
-    
     margin-bottom: 1px;
     color: black;
     text-align: start;
-    
-
-    
+    margin-left: 0;
+    padding-left: 20px;
 }
 
 
 .about__text {
     max-width: 800px;
-    margin-bottom: 30px;
-    margin-top: -10px;
     line-height: 1.6;
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.6rem;
     letter-spacing: 0.3px;
-    text-align:start;
+    text-align: start;
+    margin-bottom: 15px;
+    margin-top: -10px;
 }
-
 
 
 
@@ -400,107 +397,6 @@ body{
     letter-spacing: 1px;
 }
 
-/* Media queries para dispositivos móviles */
-@media (max-width: 768px) {
-    .carousel__arrow {
-        width: 35px;
-        height: 35px;
-        font-size: 18px;
-    }
-    
-    .carousel__arrow--prev {
-        left: 10px;
-    }
-    
-    .carousel__arrow--next {
-        right: 10px;
-    }
-    
-    .carousel__counter {
-        bottom: 10px;
-        right: 10px;
-        font-size: 1.1rem;
-        padding: 4px 10px;
-    }
-    .about__title{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-/* Media queries para pantallas pequeñas */
-@media (max-width: 480px) {
-    .carousel__arrow {
-        width: 30px;
-        height: 30px;
-        font-size: 16px;
-    }
-    
-    .carousel__counter {
-        bottom: 8px;
-        right: 8px;
-        font-size: 1rem;
-        padding: 3px 8px;
-    }
-}
-
-
-
-
-@media (min-width: 1024px) {
-    .about__title{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .about__text{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 170px;
-    }
- 
-    .carousel__arrow {
-      display: flex;
-      width: 50px;
-      height: 50px;
-      opacity: 0.7;
-      background-color: white;
-    }
-    
-    .carousel__arrow:hover {
-      opacity: 1;
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-    
-    .carousel__arrow--prev {
-      left: 20px;
-    }
-    
-    .carousel__arrow--next {
-      right: 20px;
-    }
-    
-    .carousel {
-      max-width: 50%;
-      margin-left: auto;
-      margin-right: auto;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .carousel__container {
-      width: 100%;
-    }
-    
-    .carousel__item {
-        width: 100%;
-        height: 450px;
-        object-fit: scale-down; /* Alternativa que muestra más de la imagen */
-        object-position: center;
-      }
-  }
 /* About2 section */ 
 .about2 {
     display: flex;
@@ -535,7 +431,7 @@ body{
     margin-top: -10px;
 }
 .about2__text + .about2__text {
-    margin-top: 0; /* Elimina el margen superior para párrafos consecutivos */
+    margin-top: 0; 
 }
 
 .about2__photos {
@@ -582,8 +478,69 @@ body{
     display: block;
 }
 
-/* Ajustes para pantallas más grandes */
-@media (min-width: 768px) {
+/* ========= MEDIA QUERIES OPTIMIZADAS ========= */
+
+/* Dispositivos pequeños (móviles, hasta 480px) */
+@media (max-width: 480px) {
+    .carousel__arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+    
+    .carousel__counter {
+        bottom: 8px;
+        right: 8px;
+        font-size: 1rem;
+        padding: 3px 8px;
+    }
+    
+    .about__title, .about2__title {
+        font-size: 2.3rem;
+    }
+    
+    .about__text, .about2__text {
+        font-size: 1.4rem;
+    }
+}
+
+/* Dispositivos medianos (tablets, hasta 768px) */
+@media (max-width: 768px) {
+    .carousel__arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+    
+    .carousel__arrow--prev {
+        left: 10px;
+    }
+    
+    .carousel__arrow--next {
+        right: 10px;
+    }
+    
+    .carousel__counter {
+        bottom: 10px;
+        right: 10px;
+        font-size: 1.1rem;
+        padding: 4px 10px;
+    }
+}
+
+/* Tablets y portátiles pequeños (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .about__title, .about2__title {
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .about__text, .about2__text {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
     .foto1 {
         height: 380px;
     }
@@ -591,21 +548,165 @@ body{
     .foto2, .foto3 {
         height: 320px;
     }
-  
+    
+    .carousel__item {
+        height: 400px;
+        object-fit: contain;
+    }
+    
+    .carousel {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .carousel__container {
+        width: 100%;
+    }
+    
+    .carousel__item {
+        width: 100%;
+    }
 }
 
-@media (min-width: 1024px) {
-    .about2__title{
+/* Portátiles y pantallas medianas (1024px - 1365px) */
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .about__title, .about2__title {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-left: 0;
     }
-    .about2__text{
+    
+    .about__text, .about2__text {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 170px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        max-width: 80%;
     }
+    
+    .carousel__arrow {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        opacity: 0.7;
+        background-color: white;
+    }
+    
+    .carousel__arrow:hover {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .carousel__arrow--prev {
+        left: 20px;
+    }
+    
+    .carousel__arrow--next {
+        right: 20px;
+    }
+    
+    .carousel {
+        width: 75%;
+        max-width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .carousel__item {
+        width: 100%;
+        height: 400px;
+        object-fit: contain;
+    }
+    
+    .foto1 {
+        height: 360px;
+    }
+    
+    .foto2, .foto3 {
+        height: 280px;
+    }
+    
+    .about2__photos {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Pantallas grandes (1366px y más) */
+@media (min-width: 1366px) {
+    .about__title, .about2__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+    }
+    
+    .about__text, .about2__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        max-width: 800px;
+    }
+    
+    .carousel__arrow {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        opacity: 0.7;
+        background-color: white;
+    }
+    
+    .carousel__arrow:hover {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .carousel__arrow--prev {
+        left: 20px;
+    }
+    
+    .carousel__arrow--next {
+        right: 20px;
+    }
+    
+    .carousel {
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .carousel__container {
+        width: 100%;
+    }
+    
+    .carousel__item {
+        width: 100%;
+        height: 450px;
+        object-fit: scale-down;
+        object-position: center;
+    }
+    
+    .about2__photos {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .foto1, .foto2, .foto3 {
+        height: auto;
+        max-height: 450px;
+    }
+    
     .foto1 {
         height: 420px;
     }
@@ -614,19 +715,6 @@ body{
         height: 360px;
     }
 }
-@media (min-width: 1024px) {
-    
-    .about2__photos {
-      max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .foto1, .foto2, .foto3 {
-      height: auto; /* Control de altura automática */
-      max-height: 450px; /* Altura máxima */
-    }
-  }
 
 
 
