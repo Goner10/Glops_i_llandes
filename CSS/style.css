@@ -802,7 +802,7 @@ body{
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.8rem;
     margin-left: 30px;
-    margin-top: 50px;
+    margin-top: -10px;
 }
 
 .covermanager-widget {
@@ -909,6 +909,13 @@ body{
     font-size: 1.5rem;
     transition: all 0.3s;
 }
+@media (max-width: 450px) {
+    .language-toggle .lang-btn {
+      color: black !important;
+      -webkit-text-fill-color: black; /* Para Safari en iOS */
+      text-decoration: none;
+    }
+  }
 
 .lang-btn.active {
     background: #E2A300;
