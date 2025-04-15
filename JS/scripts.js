@@ -55,25 +55,49 @@ document.addEventListener('DOMContentLoaded', function() {
     // Selector de idioma unificado (para reservas y carta)
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', function() {
-            // Funcionalidad común para todos los botones de idioma
+            // Resetear botones
             document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             
+            // Obtener el idioma seleccionado
             const lang = this.dataset.lang;
+            console.log(`Cambiando a idioma: ${lang}`);
+            
+            // OCULTAR TODOS los elementos de TODOS los idiomas primero
             document.querySelectorAll('.lang-es, .lang-en').forEach(el => {
                 el.classList.add('hidden');
             });
+            
+            // MOSTRAR SOLO los elementos del idioma seleccionado
             document.querySelectorAll(`.lang-${lang}`).forEach(el => {
                 el.classList.remove('hidden');
             });
-
-            // Solo ejecutar esta parte si estamos en la página de reservas
+            
+            // Manejo específico para la página de reservas con los iframes
             if (document.getElementById('widget-es') && document.getElementById('widget-en')) {
-                document.getElementById('widget-es').classList.toggle('hidden', lang !== 'es');
-                document.getElementById('widget-en').classList.toggle('hidden', lang !== 'en');
+                document.getElementById('widget-es').classList.add('hidden');
+                document.getElementById('widget-en').classList.add('hidden');
+                document.getElementById(`widget-${lang}`).classList.remove('hidden');
             }
         });
     });
+
+    // Al cargar la página, asegurar que solo el idioma por defecto (español) está visible
+    // Ocultar todo el contenido en inglés al cargar
+    document.querySelectorAll('.lang-en').forEach(el => {
+        el.classList.add('hidden');
+    });
+    
+    // Mostrar todo el contenido en español al cargar
+    document.querySelectorAll('.lang-es').forEach(el => {
+        el.classList.remove('hidden');
+    });
+    
+    // Activar el botón de español por defecto
+    const esButton = document.querySelector('.lang-btn[data-lang="es"]');
+    if (esButton) {
+        esButton.classList.add('active');
+    }
 
     const botonesAcordeon = document.querySelectorAll('.acordeon-titulo');
  
