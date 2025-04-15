@@ -1,6 +1,8 @@
 # 🍹 GLOPS I LLANDES 🥫
 
-![Logo Glops i Llandes](screenshots/README1.png)
+<div align="center">
+  <img src="screenshots/README1.png" width="300" alt="Logo Glops i Llandes">
+</div>
 
 ## Descripción 📋
 
@@ -22,10 +24,15 @@ El sitio presenta un diseño atractivo que refleja la personalidad del local, co
 ## Vistas del sitio web 🔍
 
 ### Página de inicio (versión móvil) 📱
-![Vista móvil](screenshots/mobile-desktop.png)![Vista móvil](screenshots/mobile-desktop2.png)
+<div align="center" style="display: flex; justify-content: center; gap: 10px;">
+  <img src="screenshots/mobile-desktop.png" width="200" height="300" alt="Vista móvil 1">
+  <img src="screenshots/mobile-desktop2.png" width="200"  height="300" alt="Vista móvil 2">
+</div>
 
 ### Página de inicio (versión tablet) 📱
-![Vista tablet](screenshots/tablet.png)
+<div align="center">
+  <img src="screenshots/tablet.png" width="200" height="300" alt="Vista tablet">
+</div>
 
 ### Página de inicio (versión desktop) 💻
 ![Vista desktop](screenshots/desktop-home.jpg)
