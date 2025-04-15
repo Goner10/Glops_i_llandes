@@ -1,7 +1,7 @@
 # 🍹 GLOPS I LLANDES 🥫
 
 <div align="center">
-  <img src="screenshots/README1.png" width="300" alt="Logo Glops i Llandes">
+  <img src="screenshots/README1.png" width="200" alt="Logo Glops i Llandes">
 </div>
 
 ## Descripción 📋
@@ -25,13 +25,13 @@ El sitio presenta un diseño atractivo que refleja la personalidad del local, co
 
 ### Página de inicio (versión móvil) 📱
 <div align="center" style="display: flex; justify-content: center; gap: 10px;">
-  <img src="screenshots/mobile-desktop.png" width="200" height="300" alt="Vista móvil 1">
-  <img src="screenshots/mobile-desktop2.png" width="200"  height="300" alt="Vista móvil 2">
+  <img src="screenshots/mobile-desktop.png" width="230" height="380" alt="Vista móvil 1">
+  <img src="screenshots/mobile-desktop2.png" width="230"  height="380" alt="Vista móvil 2">
 </div>
 
 ### Página de inicio (versión tablet) 📱
 <div align="center">
-  <img src="screenshots/tablet.png" width="200" height="300" alt="Vista tablet">
+  <img src="screenshots/tablet.png" width="600" height="500" alt="Vista tablet">
 </div>
 
 ### Página de inicio (versión desktop) 💻
