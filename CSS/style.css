@@ -624,8 +624,8 @@ body{
 }
 
 .logo__reservas img {
-    width: 145px;
-    height: 150px;
+    width: 155px;
+    height: 160px;
 }
 
 
@@ -802,7 +802,7 @@ body{
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.8rem;
     margin-left: 30px;
-    margin-top: -10px;
+    margin-top: -15px;
 }
 
 .covermanager-widget {
