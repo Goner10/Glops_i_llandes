@@ -12,8 +12,8 @@ html, body {
 
 @font-face {
     font-family: 'Brondi Condensed';
-    src: url('/Glops_i_llandes/fonts/Brondi-Condensed.woff2') format('woff2'),
-         url('/Glops_i_llandes/fonts/Brondi-Condensed.woff') format('woff');
+    src: url('../fonts/Brondi-Condensed.woff2') format('woff2'),
+         url('../fonts/Brondi-Condensed.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
