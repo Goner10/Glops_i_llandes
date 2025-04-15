@@ -201,7 +201,6 @@ body{
 .hero__title-image {
     width: 100%;
     height: auto;
-    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.5));
 }
 /*
 .hero__title {
