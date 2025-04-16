@@ -441,7 +441,7 @@ body{
 
 
 .foto2, .foto3 {
-    height: 210px;
+    height: 240px;
     overflow: hidden;
     position: relative;
     border: 2px solid #E2A300;
@@ -595,24 +595,24 @@ body{
     }
     
     .carousel {
-        width: 75%;
-        max-width: 75%;
+        width: 50%;
+        max-width: 50%;
         margin-left: auto;
         margin-right: auto;
     }
     
     .carousel__item {
         width: 100%;
-        height: 400px;
+        height: 500px;
         object-fit: contain;
     }
     
     .foto1 {
-        height: 360px;
+        height: 500px;
     }
     
     .foto2, .foto3 {
-        height: 280px;
+        height: 480px;
     }
     
     .about2__photos {
@@ -755,31 +755,28 @@ body{
 .contacto__reservas {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-top: 20px; 
+    align-items: flex-start; 
     width: 100%;
-    padding-left: 20px;
+    padding-left: 50px;
     box-sizing: border-box;
 }
 .titulo__direccion, 
 .titulo__insta {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 3.1rem;
-    letter-spacing: 1px;
+    font-size: 2.9rem;
+    letter-spacing: 0.7px;
     text-align: left; 
     width: 100%;
-     
     text-transform: uppercase;
     margin-top: 15px; 
     margin-bottom: -10px;
 }
 .titulo__telefono{
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 3.1rem;
-    letter-spacing: 1px;
+    font-size: 2.9rem;
+    letter-spacing: 0.7px;
     text-align: left; 
     width: 100%;
-     
     text-transform: uppercase;
     margin-top: -20px; 
     margin-bottom: -10px;
@@ -807,7 +804,7 @@ body{
     text-decoration: none;
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.8rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     margin-top: 0;
     
     
@@ -829,7 +826,7 @@ body{
     text-decoration: none;
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.9rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
     margin-top: 0;
     text-decoration: underline #E2A300;
 }
@@ -1743,7 +1740,7 @@ margin-left: 23px;
     text-align: center;
     color: white;
     font-family: 'Brondi Condensed', sans-serif;
-    margin-top: 3px;
+    
 }
 
 .footer__copyright {
