@@ -85,7 +85,7 @@ body{
     }
   }
   
-  
+ 
   @media (min-width: 1024px) and (max-height: 650px) {
     .hero {
       padding-top: 15vh; 
@@ -222,6 +222,14 @@ body{
     background: #f5f5f5; 
     color: black;
     border: 1px solid black;
+}
+
+@media (min-width: 768px) and (min-width: 1024px){
+
+    .hero__title-image {
+        height: 350px;
+    }
+
 }
 
 
@@ -460,7 +468,7 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover; 
-    object-position: center center; 
+    object-position: center 45%; 
     display: block;
 }
 
@@ -514,12 +522,12 @@ body{
     }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .about__title, .about2__title {
         text-align: center;
         padding-left: 0;
     }
-    
+  
     .about__text, .about2__text {
         margin-left: auto;
         margin-right: auto;
@@ -556,14 +564,68 @@ body{
 
 
 @media (min-width: 1024px) and (max-width: 1365px) {
-    .about__title, .about2__title {
+    
+    .about {
+        position: relative;
+        padding-top: 20px; 
+    }
+    
+    
+    .about__title {
+        position: absolute;
+        top: 80px; 
+        left: 70px;
+        width: 45%;
+        text-align: left;
+        margin-bottom: 5px; 
+    }
+    
+    
+    .about__content {
+        width: 45%;
+        margin-left: 70px;
+        padding-right: 30px;
+        margin-top: 10px; 
+    }
+    
+    
+    .about__text {
+        text-align: left;
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    
+    .carousel {
+        width: 35%; 
+        max-width: 35%; 
+        margin-right: 80px;
+    }
+    
+    
+    .about {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+ 
+    .carousel__item {
+        width: 100%;
+        height: 550px;
+        object-fit: cover; 
+    }
+    
+    /* El resto igual */
+    .about2__title {
         display: flex;
         justify-content: center;
         align-items: center;
         padding-left: 0;
     }
     
-    .about__text, .about2__text {
+    .about2__text {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -594,34 +656,20 @@ body{
         right: 20px;
     }
     
-    .carousel {
-        width: 50%;
-        max-width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .carousel__item {
-        width: 100%;
-        height: 500px;
-        object-fit: contain;
-    }
-    
     .foto1 {
-        height: 500px;
+        height: 400px;
     }
     
     .foto2, .foto3 {
-        height: 480px;
+        height: 320px;
     }
     
     .about2__photos {
-        width: 85%;
+        width: 55%;
         margin-left: auto;
         margin-right: auto;
     }
 }
-
 
 @media (min-width: 1366px) {
     .about__title, .about2__title {
