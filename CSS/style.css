@@ -319,20 +319,21 @@ body{
     margin-left: calc(-50vw + 50%);
     max-width: none;
     overflow: hidden;
-    
+    height: 80vh
 }
 
 .carousel__container {
     display: flex;
     transition: transform 0.5s ease-in-out;
     height: auto;
+    height: 100%;
     will-change: transform; 
 }
 
 .carousel__item {
     width: 100vw; 
-    height: auto; 
-    max-height: 650px; 
+    height: 100%; 
+    max-height: 800px; 
     object-fit: cover; 
     flex-shrink: 0; 
     object-position: center;
