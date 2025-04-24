@@ -126,6 +126,30 @@ document.addEventListener('DOMContentLoaded', function() {
         let currentIndex = 0;
         let autoPlayInterval;
         let isTouching = false;
+
+
+        const carouselElement = document.querySelector('.carousel');
+        if (carouselElement) {
+            // Prevenir gestos de pinch zoom
+            carouselElement.addEventListener('touchstart', function(e) {
+                if (e.touches.length > 1) {
+                    e.preventDefault();
+                }
+            }, { passive: false });
+            
+            // Prevenir doble tap para hacer zoom
+            let lastTapTime = 0;
+            carouselElement.addEventListener('touchend', function(e) {
+                const currentTime = new Date().getTime();
+                const tapLength = currentTime - lastTapTime;
+                
+                if (tapLength < 500 && tapLength > 0) {
+                    e.preventDefault();
+                }
+                
+                lastTapTime = currentTime;
+            }, { passive: false });
+        }
         
         // Crear flechas de navegación
         const prevArrow = document.createElement('button');
@@ -276,6 +300,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         startAutoPlay();
     }
+    
 
     function adjustReservationIframe() {
         const reservationIframe = document.querySelector('.covermanager-widget iframe');
@@ -313,4 +338,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+
+
+
 });

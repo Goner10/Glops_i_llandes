@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
@@ -87,6 +88,24 @@
     </footer>
 
 
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+             duration: 600,
+             easing: 'ease-out',
+             once: true,
+             mirror: false,
+             offset: 80,
+             delay: 0,
+             disable: false
+             });
+            });
+    </script>
     <script src="JS/scripts.js"></script>
+
+
+
 </body>
 </html>

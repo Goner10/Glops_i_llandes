@@ -8,11 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
+    
 </head>
 <body>
     
@@ -49,9 +51,9 @@
 </div>
 
 <!-- Títulos en ambos idiomas -->
-<h2 class="titulo_carta lang-es">No mires la carta con hambre... porque te lo vas a pedir todo</h2>
-<h2 class="titulo_carta lang-en hidden">Don't look at the menu hungry... because you'll order everything</h2>
-        <button class="acordeon-titulo">
+<h2 class="titulo_carta lang-es" data-aos="fade-down">No mires la carta con hambre... porque te lo vas a pedir todo</h2>
+<h2 class="titulo_carta lang-en hidden" data-aos="fade-down">Don't look at the menu hungry... because you'll order everything</h2>
+        <button class="acordeon-titulo" data-aos="fade-right">
             GLOPS
             <img src="img/GLOPS_2.png" alt="Logo Glops" class="acordeon-logo">
           </button>
@@ -979,7 +981,7 @@
 
 
 
-         <button class="acordeon-titulo">
+         <button class="acordeon-titulo" data-aos="fade-left">
           <img src="img/LLANDES_2.png" alt="Logo Llandes" class="acordeon-logo">
           LLANDES
         </button>
@@ -1421,6 +1423,23 @@
     </footer>
     
 
+   
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+             duration: 600,
+             easing: 'ease-out',
+             once: true,
+             mirror: false,
+             offset: 80,
+             delay: 0,
+             disable: false
+             });
+            });
+    </script>
     <script src="JS/scripts.js"></script>
+
+
 </body>
 </html>
