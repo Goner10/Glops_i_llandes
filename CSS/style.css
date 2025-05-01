@@ -984,37 +984,45 @@ body{
     
     .contenedor__reservas {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: row; 
         justify-content: space-between;
+        align-items: flex-start; 
         max-width: 100%;
+        gap: 10px; 
     }
     
-   
-    .info-contacto {
-        width: 48%;
+    /* Left column - Logo and reservation button */
+    .info-logo-reserva {
+        width: 30%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        margin-top: 30px;
     }
     
     .logo__reservas {
-        margin-bottom: 10px;
-        margin-top:-90px;
+        margin-bottom: 30px;
+        margin-top: 0;
     }
     
     .logo__reservas img {
-        max-height: 150px;
+        max-height: 230px;
+        width: 180px;
     }
     
     .boton__reservas {
         margin-bottom: 20px;
+        text-align: center;
+        width: 100%;
+        margin-top: -10px;
     }
     
     .boton__reservas_a {
         padding: 5px 30px;
         font-size: 2.5rem;
         transition: all 0.3s ease;
+        display: inline-block;
     }
     
     .boton__reservas_a:hover {
@@ -1022,32 +1030,56 @@ body{
         color: white;
     }
     
+    /* Middle column - Contact information */
     .contacto__reservas {
-        width: 100%;
+        width: 32%;
         align-items: flex-start;
         text-align: left;
-        padding-left: 30px;
+        padding-left: 100;
+        margin-top: -30px;
     }
     
-    .titulo__direccion, 
-    .titulo__telefono,
-    .titulo__insta {
+    .titulo__direccion {
         text-align: left;
-        font-size: 2.5rem;
-        margin-top: 10px;
+        font-size: 2.8rem;
+        margin-top: 0; 
         margin-bottom: 5px;
     }
     
+    .titulo__telefono{
+        text-align: left;
+        font-size: 2.8rem;
+        margin-top: -15px; 
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+    }
+    .telefono{
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
 
+    .titulo__insta {
+        text-align: left;
+        font-size: 2.8rem;
+        
+        margin-bottom: 5px;
+    }
+    
+    .logo__google,
+    .logo__insta{
+        margin-top: -15px;
+    }
+    /* Right column - Map */
     .mapa-interactivo {
-        width: 45%;
-        min-height: 450px;
-        margin-top: 0;
+        width: 35%;
+        height: 580px;
+        min-height: 580px;
+        margin-top: -50px;
         border-width: 2px;
     }
     
     .mapa-interactivo iframe {
-        min-height: 450px;
+        min-height: 580px;
     }
     
     .logos__comentarios {
@@ -1056,15 +1088,26 @@ body{
         width: 100%;
         margin-top: 10px;
     }
+    
+    /* Remove any old classes that might interfere */
+    .info-contacto {
+        display: none;
+    }
 }
-
 @media (min-width: 1366px) {
     .reservas {
-        padding: 80px 0;
+        padding: 60px 0;
+        max-width: 1200px;
+        margin: 0 auto;
     }
     
     .contenedor__reservas {
-        max-width: 1200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 100%;
+        gap: 20px;
     }
     
     .logo__reservas img {
