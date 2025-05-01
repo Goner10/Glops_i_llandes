@@ -224,16 +224,12 @@ body{
     border: 1px solid black;
 }
 
-@media (min-width: 768px) and (min-width: 1024px){
-
-    .hero__title-image {
-        height: 350px;
-    }
-
-}
 
 
 @media (min-width: 768px) {
+    .hero__title-image {
+        height: 330px;
+    }
     .hero__nav {
         width: 30%; 
         right: -30%; 
@@ -256,7 +252,10 @@ body{
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (min-width: 1324px){
+    .hero__title-image {
+        height: 330px;
+    }
     .hero__nav {
         width: 25%; 
         right: -25%; 
@@ -567,10 +566,11 @@ body{
 
 @media (min-width: 1024px) and (max-width: 1365px) {
     
+    
     .about {
         position: relative;
         padding-top: 20px; 
-        margin-bottom: 60px;
+        margin-bottom: 30px;
     }
     
     
@@ -581,6 +581,7 @@ body{
         width: 45%;
         text-align: left;
         margin-bottom: 5px; 
+        font-size: 3rem;
     }
     
     
@@ -588,7 +589,7 @@ body{
         width: 45%;
         margin-left: 70px;
         padding-right: 30px;
-        margin-top: 10px; 
+        margin-top: 90px; 
     }
     
     
@@ -597,6 +598,7 @@ body{
         max-width: 100%;
         margin: 0;
         padding: 25px;
+        font-size: 1.8rem;
     }
     
     
@@ -652,8 +654,10 @@ body{
 
     .about2__title {
         text-align: center;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
+        margin-top: -100px;
         width: 100%;
+        font-size: 3rem;
     }
     
     .about2__text {
@@ -686,11 +690,12 @@ body{
     }
     
     .foto1 {
-        height: 330px;
+        height: 280px;
+        
     }
     
     .foto2, .foto3 {
-        height: 280px;
+        height: 250px;
     }
     
     .about2__photos {
@@ -803,6 +808,7 @@ body{
     
     .foto1 {
         height: 380px;
+        
     }
     
     .foto2, .foto3 {
@@ -969,7 +975,7 @@ body{
         width: auto;
     }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px){
     .reservas {
         padding: 60px 0;
         max-width: 1200px;
@@ -994,6 +1000,7 @@ body{
     
     .logo__reservas {
         margin-bottom: 10px;
+        margin-top:-90px;
     }
     
     .logo__reservas img {
