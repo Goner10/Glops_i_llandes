@@ -37,58 +37,27 @@
     </section>
 
     <section class="reservas-section">
-        <h1 class="titulo__reserva">
-            <span class="lang-es">Reserva tu mesa</span>
-            <span class="lang-en hidden">Make a Reservation</span>
-        </h1>
+        <h1 class="titulo__reserva">Reserva tu mesa</h1>
         
-        <!-- Selector de idioma -->
-        <div class="language-toggle">
-            <button class="lang-btn active" data-lang="es">Español</button>
-            <button class="lang-btn" data-lang="en">English</button>
-        </div>
-
-        <!-- Widget en español -->
-        <div class="covermanager-widget" id="widget-es">
-            <script src="https://www.covermanager.com/js/iframeResizer.min.js"></script>
-            <iframe 
-                id="gloops-i-llandes-es"
-                title="Reservas en español"
-                src="https://www.covermanager.com/reservation/module_restaurant/gloops-i-llandes/spanish"
-                allow="payment"
-                frameborder="0"
-                height="650"
-                width="100%"
-                onload="iFrameResize();">
-            </iframe>
-        </div>
-
-        <!-- Widget en inglés -->
-        <div class="covermanager-widget hidden" id="widget-en">
-            <iframe 
-                id="gloops-i-llandes-en"
-                title="Reservations in English"
-                src="https://www.covermanager.com/reservation/module_restaurant/gloops-i-llandes/english"
-                allow="payment"
-                frameborder="0"
-                height="650"
-                width="100%"
-                onload="iFrameResize();">
-            </iframe>
+        <!-- Widget TheFork -->
+        <div class="thefork-widget-container">
+            <iframe
+        src="https://widget.thefork.com/b547fd05-8ec8-4adc-9040-680a8b24ee5d"
+        allow="payment *"
+        style="width: 100%; min-height:800px; border:none; overflow:scroll;"
+      ></iframe>
         </div>
 
         <p class="contacto-alternativo">
-            <span class="lang-es">¿Prefieres reservar por teléfono? Llama al <a href="tel:658159503">658  159  503</a></span>
-            <span class="lang-en hidden">Prefer to book by phone? Call <a href="tel:658159503">+34 658  159  503</a></span>
+            ¿Prefieres reservar por teléfono? Llama al <a href="tel:658159503">658 159 503</a>
         </p>
     </section>
+    
     <footer class="footer">
         <p class="footer__copyright">© Glops i Llandes. Todos los derechos reservados.</p>
         <a href="https://www.linkedin.com/in/gonzalo-marti-peirats/" target="_blank"><p class="footer__credits">Designed by: Gonzalo Martí</p></a>
     </footer>
 
-
-    
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
          document.addEventListener('DOMContentLoaded', function() {
@@ -104,8 +73,5 @@
             });
     </script>
     <script src="JS/scripts.js"></script>
-
-
-
 </body>
 </html>

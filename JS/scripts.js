@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (!isTouching) {
                     goToSlide(currentIndex + 1);
                 }
-            }, 6000);
+            }, 4000);
         }
         
         
@@ -303,24 +303,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     function adjustReservationIframe() {
-        const reservationIframe = document.querySelector('.covermanager-widget iframe');
-        if (reservationIframe) {
+        const reservationIframes = document.querySelectorAll('.thefork-widget-container iframe');
+        if (reservationIframes.length > 0) {
             const windowWidth = window.innerWidth;
             
-            if (windowWidth <= 360) {
-                reservationIframe.style.height = '850px';
-            } else if (windowWidth <= 480) {
-                reservationIframe.style.height = '750px';
-            } else if (windowWidth <= 768) {
-                reservationIframe.style.height = '700px';
-            } else {
-                reservationIframe.style.height = '650px';
-            }
+            reservationIframes.forEach(iframe => {
+                if (windowWidth <= 360) {
+                    iframe.style.height = '900px';
+                } else if (windowWidth <= 480) {
+                    iframe.style.height = '850px';
+                } else if (windowWidth <= 768) {
+                    iframe.style.height = '800px';
+                } else {
+                    iframe.style.height = '750px';
+                }
+            });
         }
     }
     
-   
-    if (document.querySelector('.covermanager-widget')) {
+    if (document.querySelector('.thefork-widget-container')) {
         adjustReservationIframe();
         window.addEventListener('resize', adjustReservationIframe);
     }

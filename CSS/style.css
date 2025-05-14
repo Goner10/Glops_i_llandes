@@ -1142,9 +1142,8 @@ body{
 
 
 /* Página cover manager */
-
 .reservas-section {
-    padding: 40px 20px;
+    padding: 40px 20px 60px;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
@@ -1157,20 +1156,23 @@ body{
     margin-top: -15px;
 }
 
-.covermanager-widget {
+.thefork-widget-container {
     margin: 20px 0;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     width: 100%;
 }
-.covermanager-widget iframe {
-    min-height: 700px; 
+
+.thefork-widget-container iframe {
+    min-height: 800px; 
     width: 100%;
+    border: none;
+    overflow: scroll;
 }
 
 .contacto-alternativo {
-    margin-top: 20px;
+    margin-top: 30px;
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.3rem;
     color: #555;
@@ -1182,7 +1184,6 @@ body{
     display: flex;
     justify-content: center;
     gap: 10px;
-    
 }
 
 .lang-btn {
@@ -1203,17 +1204,17 @@ body{
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 @media (max-width: 768px) {
-    .covermanager-widget iframe {
-        height: 750px !important; 
-    }
-    
     .titulo__reserva {
         font-size: 2rem;
         padding-top: 10px;
+    }
+    
+    .thefork-widget-container iframe {
+        min-height: 850px;
     }
 }
 
@@ -1226,11 +1227,16 @@ body{
         font-size: 3rem;
     }
     
-    .covermanager-widget iframe {
-        min-height: 650px; 
+    .thefork-widget-container iframe {
+        min-height: 800px;
     }
 }
 
+@media (min-width: 1024px) {
+    .thefork-widget-container iframe {
+        min-height: 750px;
+    }
+}
 
 
 
