@@ -231,7 +231,9 @@ body{
 
 @media (min-width: 768px) {
     .hero__title-image {
-        height: 330px;
+        height: auto;
+        max-height: 380px;
+        width: auto;
         margin-bottom: 10px;
     }
     .hero__nav {
@@ -264,7 +266,9 @@ body{
 
 @media (min-width: 1024px) and (min-width: 1324px){
     .hero__title-image {
-        height: 330px;
+        height: auto;
+        max-height: 400px;
+        width: auto;
     }
     .hero__nav {
         width: 25%; 
@@ -276,6 +280,21 @@ body{
         right: 40px; 
     }
     
+}
+
+/* Desktop: optimizar layout inicial para que se vean ambos botones */
+@media (min-width: 1024px) {
+    .hero {
+        padding-top: 18vh;
+    }
+    .hero__buttons {
+        flex-direction: row;
+        gap: 24px;
+        margin-top: 0;
+    }
+    .hero__btn:nth-child(2) {
+        margin-top: 0;
+    }
 }
 
 
@@ -644,20 +663,20 @@ main, .acordeon-carta {
     }
     
     .about__title {
-        position: absolute;
-        top: 10px; 
-        left: 95px;
-        width: 45%;
+        /* Evitar posicionamiento absoluto que causa saltos con AOS */
+        position: static;
+        width: 100%;
         text-align: left;
-        margin-bottom: 5px; 
+        margin: 0 0 15px 0;
         font-size: 3rem;
+        padding-left: 10px; /* Alinear con el padding del texto */
     }
     
     .about__content {
         width: 45%;
         margin-left: 70px;
         padding-right: 30px;
-        margin-top: 90px; 
+        margin-top: 40px; 
     }
     
     .about__text {
@@ -670,15 +689,16 @@ main, .acordeon-carta {
     
     /* Carrusel para laptop */
     .carousel {
-        width: 35%; 
-        max-width: 35%; 
+        width: 30%; 
+        max-width: 30%; 
         margin-right: 80px;
     }
     
     .carousel__item {
         width: 100%;
         height: 550px;
-        object-fit: cover; 
+        object-fit: contain;
+        background-color: #000;
     }
 
     .carousel__arrow {
@@ -756,28 +776,40 @@ main, .acordeon-carta {
         margin-left: auto;
         margin-right: auto;
     }
+    /* (Sin overrides en about2 para mantener cover por defecto) */
 }
 
 @media (min-width: 1920px) {
     .hero {
-        padding-top: 25vh;
+        padding-top: 14vh;
     }
     
     .hero__title-img {
         width: 100%;
-        max-width: 350px;
-        margin-bottom: 50px;
+        max-width: 520px;
+        margin-bottom: 40px;
+    }
+    .hero__title-image {
+        height: auto !important;
+        max-height: 520px !important;
+        width: auto !important;
+    }
+    
+    .hero__buttons {
+        flex-direction: row;
+        gap: 24px;
+        margin-top: 0;
     }
     
     .hero__btn {
         font-size: 2.2rem;
-        padding: 10px 100px;
-        min-width: 250px;
+        padding: 12px 110px;
+        min-width: 260px;
         letter-spacing: 1.5px;
     }
     
     .hero__btn:nth-child(2) {
-        margin-top: 40px;
+        margin-top: 0;
     }
 
     /* ABOUT SECTION - SOBRESCRIBIR TODO CON MÁXIMA FUERZA */
@@ -799,33 +831,70 @@ main, .acordeon-carta {
         padding: 0 !important;
         text-align: left !important;
         order: 1 !important;
+        max-width: 760px !important;
+        padding-left: 24px !important;
+        position: relative !important;
+        background: #ffffff !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.06) !important;
+        border-left: 4px solid transparent !important;
+        border-image: linear-gradient(180deg, #E2A300, #f1d38a) 1 !important;
     }
     
     .about__title {
         font-size: 3.2rem !important;
         text-align: left !important;
-        margin-bottom: 30px !important;
+        margin-bottom: 24px !important;
         letter-spacing: 1px !important;
         font-family: 'Brondi Condensed', sans-serif !important;
         color: black !important;
-        /* RESETEAR TODO */
         position: static !important;
-        width: auto !important;
-        top: auto !important;
-        left: auto !important;
+        width: 100% !important;
         padding-left: 0 !important;
         margin-left: 0 !important;
         display: block !important;
+        position: relative !important;
+    }
+
+    .about__title::after {
+        content: '' !important;
+        display: block !important;
+        width: 90px !important;
+        height: 4px !important;
+        background-color: #E2A300 !important;
+        margin-top: 10px !important;
+        border-radius: 2px !important;
+    }
+
+    /* Drop cap para el primer párrafo */
+    .about__text:first-of-type::first-letter {
+        font-size: 3.6rem !important;
+        line-height: 1 !important;
+        font-weight: 400 !important;
+        color: #E2A300 !important;
+        margin-right: 6px !important;
+        display: inline-block !important;
+    }
+
+    /* Comilla decorativa sutil de fondo */
+    .about__content::before {
+        content: '\201C' !important; /* “ */
+        position: absolute !important;
+        top: -10px !important;
+        left: -10px !important;
+        font-size: 6rem !important;
+        color: rgba(226,163,0,0.08) !important;
+        pointer-events: none !important;
+        line-height: 1 !important;
     }
     
     .about__text {
-        font-size: 1.8rem !important;
+        font-size: 2rem !important;
         text-align: left !important;
         max-width: 100% !important;
         margin: 0 0 20px 0 !important;
-        line-height: 1.6 !important;
+        line-height: 1.8 !important;
         font-family: 'Brondi Condensed', sans-serif !important;
-        letter-spacing: 0.3px !important;
+        letter-spacing: 0.4px !important;
         color: black !important;
         padding: 0 !important;
         display: block !important;
@@ -833,11 +902,11 @@ main, .acordeon-carta {
     
     /* Carrusel - lado derecho (igual que about2__photos) */
     .carousel {
-        width: 50% !important;
-        max-width: 50% !important;
+        width: 40% !important;
+        max-width: 40% !important;
         margin: 0 !important;
         order: 2 !important;
-        height: 550px !important;
+        height: 600px !important;
         position: relative !important;
         overflow: hidden !important;
         border-radius: 8px !important;
@@ -853,10 +922,11 @@ main, .acordeon-carta {
         height: 100% !important;
         width: 100% !important;
         min-width: 100% !important;
-        object-fit: cover !important;
+        object-fit: contain !important;
         object-position: center !important;
         flex-shrink: 0 !important;
         border: 3px solid #E2A300 !important;
+        background-color: #000 !important;
     }
 
     .carousel__counter {
@@ -913,7 +983,7 @@ main, .acordeon-carta {
         flex-direction: row !important;
         align-items: center !important;
         justify-content: space-between !important;
-        gap: 60px !important;
+        gap: 80px !important;
     }
     
     .about2__photos {
@@ -933,34 +1003,72 @@ main, .acordeon-carta {
         padding-left: 0 !important; /* Resetear padding-left de laptop */
         display: block !important; /* Resetear flex de laptop */
         align-items: flex-start !important; /* Resetear align-items de laptop */
+        max-width: 760px !important;
+        padding-left: 24px !important;
+        position: relative !important;
+        background: #ffffff !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.06) !important;
+        border-left: 4px solid transparent !important;
+        border-image: linear-gradient(180deg, #E2A300, #f1d38a) 1 !important;
     }
     
     .about2__title {
         font-size: 3.2rem !important;
         text-align: left !important;
-        margin-bottom: 30px !important;
+        margin-bottom: 24px !important;
         letter-spacing: 1px !important;
-        /* RESETEAR ESTILOS DE LAPTOP */
         margin-top: 0 !important;
         width: auto !important;
+        position: relative !important;
+    }
+
+    .about2__title::after {
+        content: '' !important;
+        display: block !important;
+        width: 90px !important;
+        height: 4px !important;
+        background-color: #E2A300 !important;
+        margin-top: 10px !important;
+        border-radius: 2px !important;
+    }
+
+    /* Drop cap en about2 */
+    .about2__text:first-of-type::first-letter {
+        font-size: 3.6rem !important;
+        line-height: 1 !important;
+        font-weight: 400 !important;
+        color: #E2A300 !important;
+        margin-right: 6px !important;
+        display: inline-block !important;
+    }
+
+    .about2__content::before {
+        content: '\201C' !important; /* “ */
+        position: absolute !important;
+        top: -10px !important;
+        left: -10px !important;
+        font-size: 6rem !important;
+        color: rgba(226,163,0,0.08) !important;
+        pointer-events: none !important;
+        line-height: 1 !important;
     }
     
     .about2__text {
-        font-size: 1.8rem !important;
+        font-size: 1.95rem !important;
         text-align: left !important;
         max-width: 100% !important;
-        margin: 0 0 20px 0 !important;
-        line-height: 1.6 !important;
+        margin: 0 0 24px 0 !important;
+        line-height: 1.8 !important;
         display: block !important;
         padding: 0 !important; /* Resetear padding de laptop */
     }
     
     .foto1 {
-        height: 400px !important;
+        height: 420px !important;
     }
     
     .foto2, .foto3 {
-        height: 320px !important;
+        height: 340px !important;
     }
 
     /* Resto de secciones para 1920px */
@@ -969,22 +1077,23 @@ main, .acordeon-carta {
         flex-direction: row; 
         justify-content: space-between;
         align-items: flex-start; 
-        max-width: 100%;
-        gap: 1480px; 
+        max-width: 1600px;
+        margin: 0 auto;
+        gap: 120px; 
     }
     .reservas {
         max-width: 1800px;
         margin: 0 auto;
-        padding: 80px 40px;
+        padding: 100px 40px;
     }
     
     .logo__reservas img {
-        max-height: 280px;
+        max-height: 260px;
     }
     
     .boton__reservas_a {
-        font-size: 2.8rem;
-        padding: 8px 40px;
+        font-size: 2.6rem;
+        padding: 8px 36px;
     }
     
     .titulo__direccion, 
@@ -1620,6 +1729,17 @@ margin-left: 23px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Margen de scroll para que el título quede visible en la parte superior tras el desplazamiento */
+.acordeon-titulo {
+    scroll-margin-top: 80px;
+}
+
+@media (min-width: 768px) {
+    .acordeon-titulo {
+        scroll-margin-top: 100px;
+    }
 }
 
 .acordeon-logo {

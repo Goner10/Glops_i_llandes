@@ -100,20 +100,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const botonesAcordeon = document.querySelectorAll('.acordeon-titulo');
- 
+
     botonesAcordeon.forEach(boton => {
-        boton.addEventListener('click', () => {
+        boton.addEventListener('click', (e) => {
+            e.preventDefault();
             const contenido = boton.nextElementSibling;
 
-           
+            // Cerrar otros paneles primero
             document.querySelectorAll('.acordeon-contenido').forEach(panel => {
                 if (panel !== contenido) {
                     panel.classList.remove('activo');
                 }
             });
 
-            
-            contenido.classList.toggle('activo');
+            const isMobile = window.innerWidth <= 768;
+            const offset = isMobile ? 80 : 0; // compensa cabecera/espacio en móvil
+            const rect = boton.getBoundingClientRect();
+            const targetTop = rect.top + window.pageYOffset - offset;
+
+            if (isMobile) {
+                // En móvil: primero posicionar el título y luego abrir
+                window.scrollTo({ top: targetTop, behavior: 'smooth' });
+                setTimeout(() => {
+                    contenido.classList.toggle('activo');
+                }, 200);
+            } else {
+                // En desktop: abrir y luego ajustar scroll (como ya funcionaba)
+                contenido.classList.toggle('activo');
+                requestAnimationFrame(() => {
+                    window.scrollTo({ top: targetTop, behavior: 'smooth' });
+                });
+            }
         });
     });
 
