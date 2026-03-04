@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     contenido.classList.toggle('activo');
                 }, 200);
             } else {
-                // En desktop: abrir y luego ajustar scroll (como ya funcionaba)
+                // En desktop: abrir y luego ajustar scroll 
                 contenido.classList.toggle('activo');
                 requestAnimationFrame(() => {
                     window.scrollTo({ top: targetTop, behavior: 'smooth' });
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // Carrusel con contador numérico (si existe en la página)
+    // Carrusel con contador numérico
     const carousel = document.querySelector('.carousel__container');
     if (carousel) {
         const items = document.querySelectorAll('.carousel__item');
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, { passive: false });
         }
         
-        // Crear flechas de navegación
+        // flechas de navegación
         const prevArrow = document.createElement('button');
         prevArrow.classList.add('carousel__arrow', 'carousel__arrow--prev');
         prevArrow.innerHTML = '&#10094;';
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
         nextArrow.innerHTML = '&#10095;';
         nextArrow.setAttribute('aria-label', 'Siguiente');
         
-        // Crear contador numérico 
+        //contador numérico 
         const counter = document.createElement('div');
         counter.classList.add('carousel__counter');
         counter.setAttribute('aria-live', 'polite');
