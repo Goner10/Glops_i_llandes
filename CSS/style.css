@@ -1545,36 +1545,29 @@ main, .acordeon-carta {
 
 
 
-
-/* Página fork */
-
 .reservas-section {
     padding: 40px 20px 60px;
-    
+    max-width: 1100px;
     margin: 0 auto;
     text-align: center;
 }
 
 .titulo__reserva {
     font-family: 'Brondi Condensed', sans-serif;
-    font-size: 1.8rem;
-    margin-left: 30px;
-    margin-top: -15px;
+    font-size: 2.2rem;
+    margin: 0 0 30px;
+    text-align: center;
 }
 
-.thefork-widget-container {
-    margin: 20px 0;
-    border-radius: 10px;
+.dish-widget-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto 0;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    width: 100%;
-}
-
-.thefork-widget-container iframe {
-    min-height: 800px; 
-    width: 100%;
-    border: none;
-    overflow: scroll;
 }
 
 .contacto-alternativo {
@@ -1582,6 +1575,12 @@ main, .acordeon-carta {
     font-family: 'Brondi Condensed', sans-serif;
     font-size: 1.3rem;
     color: #555;
+}
+
+.contacto-alternativo a {
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: #E2A300;
 }
 
 /* Selector de idioma */
@@ -1618,32 +1617,26 @@ main, .acordeon-carta {
         font-size: 2rem;
         padding-top: 10px;
     }
-    
-    .thefork-widget-container iframe {
-        min-height: 850px;
-        width: 100%;
+
+    .dish-widget-container {
+        padding: 12px;
+        border-radius: 8px;
     }
 }
 
 @media (min-width: 768px) {
-    .header_carta {
+    .header__carta {
         padding-top: 100px;
     }
-    
+
     .titulo__reserva {
         font-size: 3rem;
-    }
-    
-    .thefork-widget-container iframe {
-        min-height: 800px;
-        width: 100%;
     }
 }
 
 @media (min-width: 1024px) {
-    .thefork-widget-container iframe {
-        min-height: 750px;
-        width: 100%;
+    .dish-widget-container {
+        padding: 24px;
     }
 }
 
@@ -2252,7 +2245,7 @@ margin-left: 23px;
     .dish-descripcion {
         font-size: 0.9rem; 
         padding-left: 0;
-
+    }
     .bebidas-title {
         font-size: 1.4rem;
       }

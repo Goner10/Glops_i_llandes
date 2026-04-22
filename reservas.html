@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Reserva tu mesa en Glops i Llandes. Bar de tapas y cócteles con las mejores conservas y ambiente acogedor en el Cabanyal, Valencia.">
     <title>Reservas - Glops i Llandes</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="CSS/style.css">
+
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -37,43 +40,65 @@
     </section>
 
     <main>
-    <section class="reservas-section">
-        <h1 class="titulo__reserva">Reserva tu mesa</h1>
-        
-        <!-- Widget TheFork -->
-        <div class="thefork-widget-container">
-            <iframe
-        src="https://widget.thefork.com/b547fd05-8ec8-4adc-9040-680a8b24ee5d"
-        allow="payment *"
-        style="width: 100%; min-height:800px; border:none; overflow:scroll;"
-      ></iframe>
-        </div>
+        <section class="reservas-section">
+            <h1 class="titulo__reserva">Reserva tu mesa</h1>
 
-        <p class="contacto-alternativo">
-            ¿Prefieres reservar por teléfono? Llama al <a href="tel:658159503">658 159 503</a>
-        </p>
-    </section>
+            <div class="dish-widget-container">
+                <div id="hors-hydra-882011d3-6ed0-4816-b696-e98e1b6cf02d"></div>
+            </div>
+
+            <p class="contacto-alternativo">
+                ¿Prefieres reservar por teléfono? Llama al <a href="tel:658159503">658 159 503</a>
+            </p>
+        </section>
     </main>
-    
+
     <footer class="footer">
-        <p class="footer__copyright">© Glops i Llandes. Todos los derechos reservados.</p>
-        <a href="https://goner10.github.io/Portfolio-personal/" target="_blank"><p class="footer__credits">Designed by: Gonzalo Martí Peirats</p></a>
+        <p class="footer__copyright">© <span id="current-year"></span> Glops i Llandes. Todos los derechos reservados.</p>
+        <a href="https://goner10.github.io/Portfolio-personal/" target="_blank" rel="noopener noreferrer">
+            <p class="footer__credits">Designed by: Gonzalo Martí Peirats</p>
+        </a>
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-         document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function() {
             AOS.init({
-             duration: 600,
-             easing: 'ease-out',
-             once: true,
-             mirror: false,
-             offset: 80,
-             delay: 0,
-             disable: false
-             });
+                duration: 600,
+                easing: 'ease-out',
+                once: true,
+                mirror: false,
+                offset: 80,
+                delay: 0,
+                disable: false
             });
+        });
     </script>
+
+    <script>
+        var _hors = [
+            ['eid', 'hydra-882011d3-6ed0-4816-b696-e98e1b6cf02d'],
+            ['tagid', 'hors-hydra-882011d3-6ed0-4816-b696-e98e1b6cf02d'],
+            ['width', '100%'],
+            ['height', ''],
+            ['foregroundColor', ''],
+            ['backgroundColor', ''],
+            ['linkColor', ''],
+            ['errorColor', ''],
+            ['primaryButtonForegroundColor', ''],
+            ['primaryButtonBackgroundColor', ''],
+            ['secondaryButtonForegroundColor', ''],
+            ['secondaryButtonBackgroundColor', '']
+        ];
+
+        (function(d, t) {
+            var e = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            e.src = "https://reservation.dish.co/widget.js";
+            s.parentNode.insertBefore(e, s);
+        }(document, 'script'));
+    </script>
+
     <script src="JS/scripts.js"></script>
 </body>
 </html>
